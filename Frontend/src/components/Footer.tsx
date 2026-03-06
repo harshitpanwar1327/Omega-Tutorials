@@ -76,11 +76,11 @@ const Footer = () => {
 
         <div className="space-y-5">
           <h3 className="text-lg font-semibold">Contact Us</h3>
-          <ul className="space-y-2 text-blue-100">
-            <li className="flex items-start gap-3"><MapPin size={18} />Sector 15, Noida, Delhi NCR, India</li>
-            <li className="flex items-center gap-3"><Phone size={18} />+91 9311201990</li>
-            <li className="flex items-center gap-3"><Mail size={18} />info@omegatutorials.com</li>
-          </ul>
+          <div className="space-y-3 text-blue-100">
+            <p className="flex items-start gap-4"><MapPin size={18} />Sec 4 & 5 crossing, Old Railway Rd, near Panjiri Plant, Gurgoan, India</p>
+            <p className="flex items-center gap-4"><Phone size={18} />+91 9868495901</p>
+            <p className="flex items-center gap-4"><Mail size={18} />omegatutorials2@gmail.com</p>
+          </div>
         </div>
       </div>
 
