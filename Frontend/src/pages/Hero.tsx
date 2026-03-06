@@ -1,6 +1,6 @@
 import Footer from '../components/Footer'
 import Header from '../components/Header'
-import { ArrowRight, BookOpen, Calculator, ClipboardCheck, FlaskConical, GraduationCap, Heart, Users } from "lucide-react";
+import { ArrowRight, BookOpen, Calculator, ClipboardCheck, FlaskConical, GraduationCap, Heart, Star, Users } from "lucide-react";
 import { Link } from 'react-router-dom';
 import heroBg from "../assets/hero-bg.jpg";
 import { motion } from "framer-motion";
@@ -25,6 +25,12 @@ const courses = [
   { icon: Calculator, title: "Classes 6–8", desc: "Foundation building with strong concepts in Maths, Science & English.", color: "bg-[hsl(205_80%_60%)]/10 text-[hsl(205_80%_60%)]" },
   { icon: GraduationCap, title: "Classes 9–10", desc: "Board exam preparation with comprehensive study plans.", color: "bg-[hsl(215_85%_45%)]/10 text-[hsl(215_85%_45%)]" },
   { icon: FlaskConical, title: "Classes 11–12", desc: "Advanced Science & Commerce coaching for board and competitive exams.", color: "bg-[hsl(45_93%_55%)]/20 text-[hsl(215_30%_15%)]" },
+];
+
+const testimonials = [
+  { name: "Priya Sharma", class: "Class 10", text: "Omega Tutorials helped me score 95% in my board exams. The teachers are incredibly supportive!", rating: 5 },
+  { name: "Rahul Verma", class: "Class 12 (Science)", text: "The small batch size made all the difference. I got personal attention whenever I needed it.", rating: 5 },
+  { name: "Anita Gupta", class: "Parent", text: "My son's confidence and grades both improved significantly after joining Omega Tutorials.", rating: 5 },
 ];
 
 const Hero = () => {
@@ -103,7 +109,7 @@ const Hero = () => {
       </div>
 
       {/* our courses */}
-      <section className="py-20 bg-[hsl(210_40%_94%)]/50">
+      <div className="py-20 bg-[hsl(210_40%_94%)]/50">
         <div className="container mx-auto px-4 lg:px-8">
           <SectionHeading badge="Our Courses" title="Comprehensive Academic Programs" subtitle="Structured courses designed for every grade level with expert faculty." />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -129,7 +135,38 @@ const Hero = () => {
             ))}
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* testimonials */}
+      <div className="py-20 bg-[hsl(210_33%_98%)]">
+        <div className="container mx-auto px-4 lg:px-8">
+          <SectionHeading badge="Testimonials" title="What Our Students & Parents Say" subtitle="Real stories from real families who trust Omega Tutorials." />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((t, i) => (
+              <motion.div
+                key={i}
+                custom={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                className="bg-white rounded-xl p-8 shadow-[0_4px_24px_-6px_hsl(215_85%_45%_/_0.10)]"
+              >
+                <div className="flex gap-1 mb-4">
+                  {Array.from({ length: t.rating }).map((_, j) => (
+                    <Star key={j} className="h-4 w-4 fill-[hsl(45_93%_55%)] text-[hsl(45_93%_55%)]" />
+                  ))}
+                </div>
+                <p className="text-[hsl(215_30%_15%)]/80 text-sm mb-5 italic">"{t.text}"</p>
+                <div>
+                  <p className="font-semibold">{t.name}</p>
+                  <p className="text-xs text-[hsl(215_15%_50%)]">{t.class}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
 
       <Footer />
     </>
