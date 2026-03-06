@@ -1,6 +1,6 @@
 import Footer from '../components/Footer'
 import Header from '../components/Header'
-import { ArrowRight, BookOpen, ClipboardCheck, Heart, Users } from "lucide-react";
+import { ArrowRight, BookOpen, Calculator, ClipboardCheck, FlaskConical, GraduationCap, Heart, Users } from "lucide-react";
 import { Link } from 'react-router-dom';
 import heroBg from "../assets/hero-bg.jpg";
 import { motion } from "framer-motion";
@@ -19,6 +19,12 @@ const highlights = [
   { icon: BookOpen, title: "Small Batch Sizes", desc: "Limited students per batch for focused, quality learning." },
   { icon: ClipboardCheck, title: "Regular Tests", desc: "Weekly assessments to track and boost performance." },
   { icon: Heart, title: "Personal Attention", desc: "Individual focus on every student's strengths and weaknesses." },
+];
+
+const courses = [
+  { icon: Calculator, title: "Classes 6–8", desc: "Foundation building with strong concepts in Maths, Science & English.", color: "bg-[hsl(205_80%_60%)]/10 text-[hsl(205_80%_60%)]" },
+  { icon: GraduationCap, title: "Classes 9–10", desc: "Board exam preparation with comprehensive study plans.", color: "bg-[hsl(215_85%_45%)]/10 text-[hsl(215_85%_45%)]" },
+  { icon: FlaskConical, title: "Classes 11–12", desc: "Advanced Science & Commerce coaching for board and competitive exams.", color: "bg-[hsl(45_93%_55%)]/20 text-[hsl(215_30%_15%)]" },
 ];
 
 const Hero = () => {
@@ -95,6 +101,35 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      {/* our courses */}
+      <section className="py-20 bg-[hsl(210_40%_94%)]/50">
+        <div className="container mx-auto px-4 lg:px-8">
+          <SectionHeading badge="Our Courses" title="Comprehensive Academic Programs" subtitle="Structured courses designed for every grade level with expert faculty." />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {courses.map((course, i) => (
+              <motion.div
+                key={i}
+                custom={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                className="bg-white rounded-xl p-8 shadow-[0_4px_24px_-6px_hsl(215_85%_45%_/_0.10)] hover:shadow-[0_12px_40px_-10px_hsl(215_85%_45%_/_0.18)] transition-all hover:-translate-y-1"
+              >
+                <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-5 ${course.color}`}>
+                  <course.icon className="h-7 w-7" />
+                </div>
+                <h3 className="font-heading font-bold text-xl mb-3">{course.title}</h3>
+                <p className="text-[hsl(215_15%_50%)] text-sm mb-5">{course.desc}</p>
+                <Link to="/courses" className="text-blue-600 font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
+                  Learn More <ArrowRight className="h-4 w-4" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </>
