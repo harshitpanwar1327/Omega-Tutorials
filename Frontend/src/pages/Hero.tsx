@@ -72,11 +72,6 @@ const Hero = () => {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </button>
               </Link>
-              <Link to="/contact">
-                <button className="border border-white/30 text-white hover:bg-white/10 font-semibold text-base px-8 py-3 rounded-lg transition">
-                  Contact Us
-                </button>
-              </Link>
             </div>
           </motion.div>
         </div>
@@ -165,6 +160,32 @@ const Hero = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </div>
+
+      {/* CTA */}
+      <div className="py-20 bg-[linear-gradient(135deg,hsl(215_85%_45%),hsl(205_80%_60%))]">
+        <div className="container mx-auto px-4 lg:px-8 text-center">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <h2 className="text-3xl md:text-4xl font-bold text-[hsl(0_0%_100%)] mb-4">
+              Ready to Excel Academically?
+            </h2>
+            <p className="text-[hsl(0_0%_100%)]/80 max-w-xl mx-auto mb-8">
+              Join hundreds of successful students at Omega Tutorials. Limited seats available for the new academic session.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link to="/contact">
+                <button className="flex items-center bg-[linear-gradient(135deg,hsl(45_93%_55%),hsl(35_95%_55%))] text-white font-bold text-base px-8 py-3 rounded-lg shadow-[0_12px_40px_-10px_hsl(215_85%_45%_/_0.18)] hover:scale-105 transition-transform">
+                  Enroll Now <ArrowRight className="ml-2 h-5 w-5" />
+                </button>
+              </Link>
+              <Link to="/courses">
+                <button className="border border-white/30 text-white hover:bg-white/10 font-semibold text-base px-8 py-3 rounded-lg transition">
+                  View Courses
+                </button>
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </div>
 
