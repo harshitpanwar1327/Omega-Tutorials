@@ -8,7 +8,6 @@ import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
 
 function App() {
-
   return (
     <>
       <Routes>
