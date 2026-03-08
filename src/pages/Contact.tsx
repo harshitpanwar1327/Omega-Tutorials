@@ -1,10 +1,12 @@
 import { useState } from "react";
-import Footer from "../components/Footer"
-import Header from "../components/Header"
 import { motion } from "framer-motion"
 import { Phone, Mail, MapPin, Send, CheckCircle } from "lucide-react";
 import { toast } from "react-toastify";
-import WhatsappChat from "../components/WhatsappChat";
+import { lazy } from "react";
+
+const Header = lazy(() => import('../components/Header'));
+const WhatsappChat = lazy(() => import('../components/WhatsappChat'));
+const Footer = lazy(() => import('../components/Footer'));
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -42,7 +44,7 @@ const Contact = () => {
                     <CheckCircle className="h-16 w-16 text-[hsl(145_63%_42%)] mx-auto mb-4" />
                     <h3 className="text-xl font-bold mb-2">Thank You!</h3>
                     <p className="text-[hsl(215_15%_50%)]">We've received your message and will contact you within 24 hours.</p>
-                    <button className="mt-6 p-3 bg-[hsl(145_63%_42%)] text-white rounded-xl hover:bg-[hsl(145_63%_42%)]/90" onClick={() => { setSubmitted(false); setForm({ name: "", phone: "", classLevel: "", message: "" }); }}>
+                    <button className="mt-6 p-3 bg-[hsl(145_63%_42%)] text-white rounded-xl hover:bg-[hsl(145_63%_42%)]/90" onClick={() => { setSubmitted(false); setForm({ name: "", phone: "", classLevel: "", message: "" }); }} aria-label="Send Another Message">
                       Send Another Message
                     </button>
                   </div>
@@ -69,7 +71,7 @@ const Contact = () => {
                       <label className="text-sm font-medium mb-1.5 block">Message</label>
                       <textarea className="flex min-h-[80px] w-full rounded-md border border-[hsl(214_25%_90%)] bg-[hsl(210_33%_98%)] px-3 py-2 text-sm ring-offset-[hsl(210_33%_98%)] placeholder:text-[hsl(215_15%_50%)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="Tell us about your requirements..." rows={4} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
                     </div>
-                    <button type="submit" className="w-full bg-[linear-gradient(135deg,hsl(215_85%_45%),hsl(205_80%_60%))] text-white font-bold shadow-[0_2px_20px_-4px_hsl(215_85%_45%_/_0.12)] inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium h-12 duration-300">
+                    <button type="submit" className="w-full bg-[linear-gradient(135deg,hsl(215_85%_45%),hsl(205_80%_60%))] text-white font-bold shadow-[0_2px_20px_-4px_hsl(215_85%_45%_/_0.12)] inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium h-12 duration-300" aria-label="Send Message">
                       <Send className="mr-2 h-4 w-4" /> Send Message
                     </button>
                   </form>
@@ -86,7 +88,7 @@ const Contact = () => {
                       { icon: Phone, label: "Call Us", value: "+91 9868495901", link: "tel:+919868495901" },
                       { icon: Mail, label: "Email Us", value: "omegatutorials2@gmail.com", link: "mailto:omegatutorials2@gmail.com?subject=Course%20Enquiry" },
                     ].map((item, i) => (
-                      <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 hover:opacity-80 transition">
+                      <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 hover:opacity-80 transition" aria-label={`${item.label} - ${item.value}`}>
                         <div className="w-10 h-10 rounded-lg bg-[linear-gradient(135deg,hsl(215_85%_45%),hsl(205_80%_60%))] flex items-center justify-center shrink-0">
                           <item.icon className="h-5 w-5 text-white" />
                         </div>

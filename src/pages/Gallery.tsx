@@ -1,9 +1,11 @@
-import Footer from "../components/Footer"
-import Header from "../components/Header"
 import { motion, AnimatePresence } from "framer-motion"
 import { X } from "lucide-react";
 import { useState } from "react";
-import WhatsappChat from "../components/WhatsappChat";
+import { lazy } from "react";
+
+const Footer = lazy(() => import('../components/Footer'));
+const Header = lazy(() => import('../components/Header'));
+const WhatsappChat = lazy(() => import('../components/WhatsappChat'));
 
 const categories = ["All", "Classroom", "Events", "Activities"];
 
@@ -42,7 +44,7 @@ const Gallery = () => {
           <div className="container mx-auto px-4 lg:px-8">
             <div className="flex flex-wrap justify-center gap-3 mb-12">
               {categories.map((cat) => (
-                <button key={cat} onClick={() => setActive(cat)} className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${active === cat ? "bg-[linear-gradient(135deg,hsl(215_85%_45%),hsl(205_80%_60%))] text-white shadow-[0_2px_20px_-4px_hsl(215_85%_45%_/_0.12)]" : "bg-[hsl(210_40%_94%)]/50 text-[hsl(215_30%_15%)] hover:bg[hsl(215_85%_45%)]/10"}`}>
+                <button key={cat} onClick={() => setActive(cat)} className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${active === cat ? "bg-[linear-gradient(135deg,hsl(215_85%_45%),hsl(205_80%_60%))] text-white shadow-[0_2px_20px_-4px_hsl(215_85%_45%_/_0.12)]" : "bg-[hsl(210_40%_94%)]/50 text-[hsl(215_30%_15%)] hover:bg[hsl(215_85%_45%)]/10"}`} aria-pressed={active === cat} aria-label={`Filter by ${cat}`}>
                   {cat}
                 </button>
               ))}
@@ -83,7 +85,7 @@ const Gallery = () => {
               className="fixed inset-0 z-[100] bg-[hsl(215_30%_15%)]/80 backdrop-blur-sm flex items-center justify-center p-4"
               onClick={() => setLightbox(null)}
             >
-              <button className="absolute top-6 right-6 text-white" onClick={() => setLightbox(null)}>
+              <button className="absolute top-6 right-6 text-white" onClick={() => setLightbox(null)} aria-label="Close Lightbox">
                 <X className="h-8 w-8" />
               </button>
               <motion.img

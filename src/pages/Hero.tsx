@@ -1,11 +1,13 @@
-import Footer from '../components/Footer'
-import Header from '../components/Header'
 import { ArrowRight, BookOpen, Calculator, ClipboardCheck, FlaskConical, GraduationCap, Heart, Star, Users } from "lucide-react";
 import { Link } from 'react-router-dom';
-import heroBg from "../assets/hero-bg.jpg";
+import heroBg from "../assets/hero-bg.webp";
 import { motion } from "framer-motion";
-import SectionHeading from '../components/SectionHeading';
-import WhatsappChat from '../components/WhatsappChat';
+import { lazy } from 'react';
+
+const WhatsappChat = lazy(() => import('../components/WhatsappChat'));
+const Footer = lazy(() => import('../components/Footer'));
+const Header = lazy(() => import('../components/Header'));
+const SectionHeading = lazy(() => import('../components/SectionHeading'));
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -44,7 +46,7 @@ const Hero = () => {
         {/* landing section */}
         <div className="relative min-h-[90vh] flex items-center overflow-hidden">
           <div className="absolute inset-0">
-            <img src={heroBg} alt="Students studying at Omega Tutorials" className="w-full h-full object-cover"/>
+            <img src={heroBg} alt="Students studying at Omega Tutorials" className="w-full h-full object-cover" loading='eager' fetchPriority='high' decoding='async'/>
             <div className="absolute inset-0 bg-[linear-gradient(135deg,hsl(215_50%_18%),hsl(215_85%_45%))] opacity-80"></div>
           </div>
           <div className="relative max-w-7xl px-4 lg:px-18 py-20">
@@ -67,7 +69,7 @@ const Hero = () => {
 
               <div className="flex flex-wrap gap-4 mt-8">
                 <Link to="/contact">
-                  <button className="flex items-center bg-[linear-gradient(135deg,hsl(45_93%_55%),hsl(35_95%_55%))] text-white font-bold text-base px-8 py-3 rounded-lg shadow-[0_12px_40px_-10px_hsl(215_85%_45%_/_0.18)] hover:scale-105 transition-transform">
+                  <button className="flex items-center bg-[linear-gradient(135deg,hsl(45_93%_55%),hsl(35_95%_55%))] text-white font-bold text-base px-8 py-3 rounded-lg shadow-[0_12px_40px_-10px_hsl(215_85%_45%_/_0.18)] hover:scale-105 transition-transform" aria-label="Enroll Now">
                     Enroll Now
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </button>
@@ -175,12 +177,12 @@ const Hero = () => {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link to="/contact">
-                  <button className="flex items-center bg-[linear-gradient(135deg,hsl(45_93%_55%),hsl(35_95%_55%))] text-white font-bold text-base px-8 py-3 rounded-lg shadow-[0_12px_40px_-10px_hsl(215_85%_45%_/_0.18)] hover:scale-105 transition-transform">
+                  <button className="flex items-center bg-[linear-gradient(135deg,hsl(45_93%_55%),hsl(35_95%_55%))] text-white font-bold text-base px-8 py-3 rounded-lg shadow-[0_12px_40px_-10px_hsl(215_85%_45%_/_0.18)] hover:scale-105 transition-transform" aria-label="Enroll Now">
                     Enroll Now <ArrowRight className="ml-2 h-5 w-5" />
                   </button>
                 </Link>
                 <Link to="/courses">
-                  <button className="border border-white/30 text-white hover:bg-white/10 font-semibold text-base px-8 py-3 rounded-lg transition">
+                  <button className="border border-white/30 text-white hover:bg-white/10 font-semibold text-base px-8 py-3 rounded-lg transition" aria-label="View Courses">
                     View Courses
                   </button>
                 </Link>

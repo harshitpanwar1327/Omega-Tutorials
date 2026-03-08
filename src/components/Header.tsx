@@ -24,7 +24,7 @@ const Header = () => {
           <NavLink to="/contact" className={navClass}>Contact</NavLink>
           <NavLink to="/contact" className="ml-3 bg-[linear-gradient(135deg,hsl(215_85%_45%),hsl(205_80%_60%))] text-white px-4 py-2 rounded-xl font-semibold shadow-[0_2px_20px_-4px_hsl(215_85%_45%/0.12)] hover:scale-102 transition duration-300">Enroll Now</NavLink>
         </div>
-        <button className="lg:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+        <button className="lg:hidden" aria-label="Open navigation menu" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <X /> : <Menu />}
         </button>
       </div>

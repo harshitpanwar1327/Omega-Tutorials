@@ -1,9 +1,11 @@
-import Footer from "../components/Footer"
-import Header from "../components/Header"
 import { motion } from "framer-motion"
-import SectionHeading from "../components/SectionHeading"
 import { Star, Trophy, TrendingUp, Award } from "lucide-react";
-import WhatsappChat from "../components/WhatsappChat"
+import { lazy } from "react";
+
+const Footer = lazy(() => import('../components/Footer'));
+const Header = lazy(() => import('../components/Header'));
+const WhatsappChat = lazy(() => import('../components/WhatsappChat'));
+const SectionHeading = lazy(() => import('../components/SectionHeading'));
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },

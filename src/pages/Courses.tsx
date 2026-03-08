@@ -1,10 +1,12 @@
-import Footer from '../components/Footer'
-import Header from '../components/Header'
 import { Link } from 'react-router-dom'
 import { ArrowRight, BookOpen, Calculator, CheckCircle, ClipboardCheck, FlaskConical, HelpCircle, Languages, TrendingUp } from 'lucide-react'
 import { motion } from 'framer-motion'
-import SectionHeading from '../components/SectionHeading'
-import WhatsappChat from '../components/WhatsappChat'
+import { lazy } from 'react'
+
+const Header = lazy(() => import('../components/Header'));
+const WhatsappChat = lazy(() => import('../components/WhatsappChat'));
+const Footer = lazy(() => import('../components/Footer'));
+const SectionHeading = lazy(() => import('../components/SectionHeading'));
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -128,7 +130,7 @@ const Courses = () => {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link to="/contact">
-                  <button className="flex items-center bg-[linear-gradient(135deg,hsl(45_93%_55%),hsl(35_95%_55%))] text-black font-bold text-base px-8 py-3 rounded-lg shadow-[0_12px_40px_-10px_hsl(215_85%_45%_/_0.18)] hover:scale-105 transition-transform">
+                  <button className="flex items-center bg-[linear-gradient(135deg,hsl(45_93%_55%),hsl(35_95%_55%))] text-black font-bold text-base px-8 py-3 rounded-lg shadow-[0_12px_40px_-10px_hsl(215_85%_45%_/_0.18)] hover:scale-105 transition-transform" aria-label="Enroll Now">
                     Enroll Now <ArrowRight className="ml-2 h-5 w-5" />
                   </button>
                 </Link>
