@@ -48,9 +48,17 @@ const Footer = () => {
         <div className="flex flex-col gap-3">
           <h3 className="text-lg font-semibold">Contact Us</h3>
           <div className="flex flex-col gap-2 text-blue-100">
-            <p className="flex items-center gap-2 flex-wrap"><MapPin size={18} className="shrink-0" /> Sec 4 & 5 crossing, Old Railway Rd, near Panjiri Plant, Gurgoan, India</p>
-            <p className="flex items-center gap-2 flex-wrap"><Phone size={18} className="shrink-0"  /> +91 9868495901</p>
-            <p className="flex items-center gap-2 flex-wrap"><Mail size={18} className="shrink-0"  /> omegatutorials2@gmail.com</p>
+            <a href="https://www.google.com/maps/place/Omega+Tutorials+-+Sector+4,+Gurgaon/@28.4736117,77.0066784,17z/data=!3m1!4b1!4m6!3m5!1s0x390d178506a7fbcf:0x173b0a33e7453e18!8m2!3d28.4736117!4d77.0092533!16s%2Fg%2F11n53fkb5v" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:text-white transition">
+              <MapPin size={18} className="shrink-0" /> <span className="break-words">Sec 4 & 5 crossing, Old Railway Rd, near Panjiri Plant, Gurgaon, India</span>
+            </a>
+
+            <a href="tel:+919868495901" className="flex items-center gap-2 cursor-pointer hover:text-white transition">
+              <Phone size={18} className="shrink-0" /> <span>+91 9868495901</span>
+            </a>
+
+            <a href="mailto:omegatutorials2@gmail.com" className="flex items-center gap-2 cursor-pointer hover:text-white transition break-all">
+              <Mail size={18} className="shrink-0" /><span className="break-words">omegatutorials2@gmail.com</span>
+            </a>
           </div>
         </div>
       </div>
