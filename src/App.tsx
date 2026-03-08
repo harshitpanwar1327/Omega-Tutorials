@@ -6,10 +6,13 @@ import Courses from './pages/Courses'
 import Results from './pages/Results'
 import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
     <>
+      <ScrollToTop />
+
       <Routes>
         <Route path='/' element={<Hero />}/>
         <Route path='/hero' element={<Hero />}/>
