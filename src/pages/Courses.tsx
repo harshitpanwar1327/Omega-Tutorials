@@ -1,10 +1,9 @@
-import Footer from '../components/Footer'
-import Header from '../components/Header'
 import { Link } from 'react-router-dom'
 import { ArrowRight, BookOpen, Calculator, CheckCircle, ClipboardCheck, FlaskConical, HelpCircle, Languages, TrendingUp } from 'lucide-react'
 import { motion } from 'framer-motion'
-import SectionHeading from '../components/SectionHeading'
-import WhatsappChat from '../components/WhatsappChat'
+import { lazy } from 'react'
+
+const SectionHeading = lazy(() => import('../components/SectionHeading'));
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -55,28 +54,33 @@ const courseData = [
 const Courses = () => {
   return (
     <>
-      <Header />
-
-      <div className='pt-18'>
-        <div className="py-20 bg-[linear-gradient(135deg,hsl(215_50%_18%),hsl(215_85%_45%))]">
-          <div className="container mx-auto px-4 lg:px-8 text-center">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-              <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-white/10 text-white mb-4">Courses</span>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Academic Programs</h1>
-              <p className="text-white/80 max-w-2xl mx-auto">Comprehensive courses designed for every grade level with expert faculty and proven results.</p>
-            </motion.div>
-          </div>
+        <div className="mt-15 px-4 py-30 bg-[linear-gradient(135deg,hsl(215_50%_18%),hsl(215_85%_45%))]">
+          <motion.div className="text-center flex flex-col gap-4"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              ease: "easeOut",
+              staggerChildren: 0.2
+            }}
+            viewport={{ once: true }}
+          >
+            <div className="self-center px-4 py-2 rounded-full text-xs font-semibold tracking-wider bg-white/10 text-white">COURSES</div>
+            <h1 className="text-4xl font-bold text-white">Our Academic Programs</h1>
+            <p className="text-white/80">Comprehensive courses designed for every grade level with expert faculty and proven results.</p>
+          </motion.div>
         </div>
 
+      <div className='pt-18'>
         {/* courses */}
         <div className="py-20 bg-[hsl(210_33%_98%)]">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="space-y-12 max-w-5xl mx-auto">
               {courseData.map((course, i) => (
                 <motion.div key={i} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-                  className="bg-card rounded-2xl shadow-[0_4px_24px_-6px_hsl(215_85%_45%_/_0.10)] overflow-hidden md:flex hover:scale-102 transition-transform"
+                  className="bg-card rounded-2xl shadow-[0_4px_24px_-6px_hsl(215_85%_45%/0.10)] overflow-hidden md:flex hover:scale-102 transition-transform"
                 >
-                  <div className={`bg-gradient-to-br ${course.color} p-8 md:w-1/3 flex flex-col justify-center items-center text-white`}>
+                  <div className={`bg-linear-to-br ${course.color} p-8 md:w-1/3 flex flex-col justify-center items-center text-white`}>
                     <course.icon className="h-12 w-12 mb-4" />
                     <span className="text-xs font-semibold uppercase tracking-wider opacity-80">{course.badge}</span>
                     <h3 className="font-bold text-2xl mt-1">{course.title}</h3>
@@ -104,7 +108,7 @@ const Courses = () => {
             <SectionHeading badge="Features" title="What Makes Our Courses Special" />
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               {features.map((f, i) => (
-                <motion.div key={i} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white rounded-xl p-8 shadow-[0_4px_24px_-6px_hsl(215_85%_45%_/_0.10)] text-center hover:scale-102 transition-transform transition-shadow group">
+                <motion.div key={i} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white rounded-xl p-8 shadow-[0_4px_24px_-6px_hsl(215_85%_45%/0.10)] text-center hover:scale-102 transition-all group">
                   <div className="w-14 h-14 rounded-xl bg-[linear-gradient(135deg,hsl(215_85%_45%),hsl(205_80%_60%))] flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                     <f.icon className="h-7 w-7 text-white" />
                   </div>
@@ -128,7 +132,7 @@ const Courses = () => {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link to="/contact">
-                  <button className="flex items-center bg-[linear-gradient(135deg,hsl(45_93%_55%),hsl(35_95%_55%))] text-black font-bold text-base px-8 py-3 rounded-lg shadow-[0_12px_40px_-10px_hsl(215_85%_45%_/_0.18)] hover:scale-105 transition-transform">
+                  <button className="flex items-center bg-[linear-gradient(135deg,hsl(45_93%_55%),hsl(35_95%_55%))] text-black font-bold text-base px-8 py-3 rounded-lg shadow-[0_12px_40px_-10px_hsl(215_85%_45%/0.18)] hover:scale-105 transition-transform" aria-label="Enroll Now">
                     Enroll Now <ArrowRight className="ml-2 h-5 w-5" />
                   </button>
                 </Link>
@@ -137,9 +141,6 @@ const Courses = () => {
           </div>
         </div>
       </div>
-
-      <WhatsappChat />
-      <Footer />
     </>
   )
 }

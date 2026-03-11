@@ -1,11 +1,10 @@
-import Footer from '../components/Footer'
-import Header from '../components/Header'
 import { ArrowRight, BookOpen, Calculator, ClipboardCheck, FlaskConical, GraduationCap, Heart, Star, Users } from "lucide-react";
 import { Link } from 'react-router-dom';
-import heroBg from "../assets/hero-bg.jpg";
+import heroBg from "../assets/hero-bg.webp";
 import { motion } from "framer-motion";
-import SectionHeading from '../components/SectionHeading';
-import WhatsappChat from '../components/WhatsappChat';
+import { lazy } from 'react';
+
+const SectionHeading = lazy(() => import('../components/SectionHeading'));
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -38,13 +37,11 @@ const Hero = () => {
 
   return (
     <>
-      <Header />
-
       <div className='pt-18'>  
         {/* landing section */}
         <div className="relative min-h-[90vh] flex items-center overflow-hidden">
           <div className="absolute inset-0">
-            <img src={heroBg} alt="Students studying at Omega Tutorials" className="w-full h-full object-cover"/>
+            <img src={heroBg} alt="Students studying at Omega Tutorials" className="w-full h-full object-cover" loading='eager' fetchPriority='high' decoding='async'/>
             <div className="absolute inset-0 bg-[linear-gradient(135deg,hsl(215_50%_18%),hsl(215_85%_45%))] opacity-80"></div>
           </div>
           <div className="relative max-w-7xl px-4 lg:px-18 py-20">
@@ -67,7 +64,7 @@ const Hero = () => {
 
               <div className="flex flex-wrap gap-4 mt-8">
                 <Link to="/contact">
-                  <button className="flex items-center bg-[linear-gradient(135deg,hsl(45_93%_55%),hsl(35_95%_55%))] text-white font-bold text-base px-8 py-3 rounded-lg shadow-[0_12px_40px_-10px_hsl(215_85%_45%_/_0.18)] hover:scale-105 transition-transform">
+                  <button className="flex items-center bg-[linear-gradient(135deg,hsl(45_93%_55%),hsl(35_95%_55%))] text-white font-bold text-base px-8 py-3 rounded-lg shadow-[0_12px_40px_-10px_hsl(215_85%_45%/0.18)] hover:scale-105 transition-transform" aria-label="Enroll Now">
                     Enroll Now
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </button>
@@ -90,7 +87,7 @@ const Hero = () => {
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={fadeUp}
-                  className="bg-white rounded-xl p-6 shadow-[0_4px_24px_-6px_hsl(215_85%_45%_/_0.10)] hover:shadow-[0_12px_40px_-10px_hsl(215_85%_45%_/_0.18)] transition-shadow group"
+                  className="bg-white rounded-xl p-6 shadow-[0_4px_24px_-6px_hsl(215_85%_45%/0.10)] hover:shadow-[0_12px_40px_-10px_hsl(215_85%_45%/0.18)] transition-shadow group"
                 >
                   <div className="w-12 h-12 rounded-lg bg-[linear-gradient(135deg,hsl(215_85%_45%),hsl(205_80%_60%))] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <item.icon className="h-6 w-6 text-[hsl(0_0%_100%)]" />
@@ -116,7 +113,7 @@ const Hero = () => {
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={fadeUp}
-                  className="bg-white rounded-xl p-8 shadow-[0_4px_24px_-6px_hsl(215_85%_45%_/_0.10)] hover:shadow-[0_12px_40px_-10px_hsl(215_85%_45%_/_0.18)] transition-all hover:-translate-y-1"
+                  className="bg-white rounded-xl p-8 shadow-[0_4px_24px_-6px_hsl(215_85%_45%/0.10)] hover:shadow-[0_12px_40px_-10px_hsl(215_85%_45%/0.18)] transition-all hover:-translate-y-1"
                 >
                   <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-5 ${course.color}`}>
                     <course.icon className="h-7 w-7" />
@@ -145,7 +142,7 @@ const Hero = () => {
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={fadeUp}
-                  className="bg-white rounded-xl p-8 shadow-[0_4px_24px_-6px_hsl(215_85%_45%_/_0.10)]"
+                  className="bg-white rounded-xl p-8 shadow-[0_4px_24px_-6px_hsl(215_85%_45%/0.10)]"
                 >
                   <div className="flex gap-1 mb-4">
                     {Array.from({ length: t.rating }).map((_, j) => (
@@ -175,12 +172,12 @@ const Hero = () => {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link to="/contact">
-                  <button className="flex items-center bg-[linear-gradient(135deg,hsl(45_93%_55%),hsl(35_95%_55%))] text-white font-bold text-base px-8 py-3 rounded-lg shadow-[0_12px_40px_-10px_hsl(215_85%_45%_/_0.18)] hover:scale-105 transition-transform">
+                  <button className="flex items-center bg-[linear-gradient(135deg,hsl(45_93%_55%),hsl(35_95%_55%))] text-white font-bold text-base px-8 py-3 rounded-lg shadow-[0_12px_40px_-10px_hsl(215_85%_45%/0.18)] hover:scale-105 transition-transform" aria-label="Enroll Now">
                     Enroll Now <ArrowRight className="ml-2 h-5 w-5" />
                   </button>
                 </Link>
                 <Link to="/courses">
-                  <button className="border border-white/30 text-white hover:bg-white/10 font-semibold text-base px-8 py-3 rounded-lg transition">
+                  <button className="border border-white/30 text-white hover:bg-white/10 font-semibold text-base px-8 py-3 rounded-lg transition" aria-label="View Courses">
                     View Courses
                   </button>
                 </Link>
@@ -189,9 +186,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
-      <WhatsappChat />
-      <Footer />
     </>
   )
 }

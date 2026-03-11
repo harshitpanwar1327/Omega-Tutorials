@@ -1,9 +1,8 @@
-import Footer from "../components/Footer"
-import Header from "../components/Header"
 import { motion } from "framer-motion"
-import SectionHeading from "../components/SectionHeading"
 import { Star, Trophy, TrendingUp, Award } from "lucide-react";
-import WhatsappChat from "../components/WhatsappChat"
+import { lazy } from "react";
+
+const SectionHeading = lazy(() => import('../components/SectionHeading'));
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -38,25 +37,30 @@ const testimonials = [
 const Results = () => {
   return (
     <>
-      <Header />
-
-      <div className='pt-18'>
-        <div className="py-20 bg-[linear-gradient(135deg,hsl(215_50%_18%),hsl(215_85%_45%))]">
-          <div className="container mx-auto px-4 lg:px-8 text-center">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-              <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-white/10 text-white mb-4">Results & Testimonials</span>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Proven Track Record</h1>
-              <p className="text-white/80 max-w-2xl mx-auto">Years of consistent results that speak for themselves.</p>
-            </motion.div>
-          </div>
+        <div className="mt-15 px-4 py-30 bg-[linear-gradient(135deg,hsl(215_50%_18%),hsl(215_85%_45%))]">
+          <motion.div className="text-center flex flex-col gap-4"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              ease: "easeOut",
+              staggerChildren: 0.2
+            }}
+            viewport={{ once: true }}
+          >
+            <div className="self-center px-4 py-2 rounded-full text-xs font-semibold tracking-wider bg-white/10 text-white">RESULTS & TESTIMONIALS</div>
+            <h1 className="text-4xl font-bold text-white">Our Proven Track Record</h1>
+            <p className="text-white/80">Years of consistent results that speak for themselves.</p>
+          </motion.div>
         </div>
 
+      <div className='pt-18'>
         {/* stats */}
         <div className="py-16 bg-[hsl(210_33%_98%)]">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
               {stats.map((s, i) => (
-                <motion.div key={i} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white rounded-xl p-6 shadow-[0_4px_24px_-6px_hsl(215_85%_45%_/_0.10)] text-center">
+                <motion.div key={i} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white rounded-xl p-6 shadow-[0_4px_24px_-6px_hsl(215_85%_45%/0.10)] text-center">
                   <div className="w-12 h-12 rounded-lg bg-[linear-gradient(135deg,hsl(215_85%_45%),hsl(205_80%_60%))] flex items-center justify-center mx-auto mb-3">
                     <s.icon className="h-6 w-6 text-white" />
                   </div>
@@ -74,7 +78,7 @@ const Results = () => {
             <SectionHeading badge="Toppers" title="Our Star Performers" subtitle="Students who achieved outstanding results with Omega Tutorials." />
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {toppers.map((t, i) => (
-                <motion.div key={i} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white rounded-xl p-6 shadow-[0_4px_24px_-6px_hsl(215_85%_45%_/_0.10)] flex items-center gap-4">
+                <motion.div key={i} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white rounded-xl p-6 shadow-[0_4px_24px_-6px_hsl(215_85%_45%/0.10)] flex items-center gap-4">
                   <div className="w-18 h-18 rounded-full bg-[linear-gradient(135deg,hsl(45_93%_55%),hsl(35_95%_55%))] flex items-center justify-center shrink-0">
                     <span className="font-bold text-lg text-[hsl(215_30%_15%)]">{t.score}</span>
                   </div>
@@ -95,7 +99,7 @@ const Results = () => {
             <SectionHeading badge="Testimonials" title="What Students & Parents Say" />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {testimonials.map((t, i) => (
-                <motion.div key={i} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white rounded-xl p-8 shadow-[0_4px_24px_-6px_hsl(215_85%_45%_/_0.10)]">
+                <motion.div key={i} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white rounded-xl p-8 shadow-[0_4px_24px_-6px_hsl(215_85%_45%/0.10)]">
                   <div className="flex gap-1 mb-4">
                     {Array.from({ length: 5 }).map((_, j) => (
                       <Star key={j} className="h-4 w-4 fill-[hsl(45_93%_55%)] text-[hsl(45_93%_55%)]" />
@@ -110,9 +114,6 @@ const Results = () => {
           </div>
         </div>
       </div>
-
-      <WhatsappChat />
-      <Footer />
     </>
   )
 }

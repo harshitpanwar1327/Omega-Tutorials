@@ -1,17 +1,18 @@
-import { GraduationCap, MapPin, Phone, Mail, Facebook, Instagram, Youtube } from "lucide-react";
+import { MapPin, Phone, Mail, Facebook, Instagram, Youtube } from "lucide-react";
 import { NavLink } from "react-router-dom";
+import Logo from '../assets/Logo.jpg';
 
 const Footer = () => {
   return (
-    <div className="bg-[linear-gradient(135deg,hsl(215_50%_18%),hsl(215_85%_45%))] text-white flex flex-col">
-      <div className="p-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-16">
+    <footer className="bg-[linear-gradient(135deg,hsl(215_50%_18%),hsl(215_85%_45%))] text-white flex flex-col">
+      <div className="p-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-16">
         <div className="flex flex-col gap-4 md:col-span-3 lg:col-span-2">
-          <NavLink to={'/hero'} className="flex items-center gap-2">
-            <GraduationCap size={28} />
+          <NavLink to={'/'} className="flex items-center gap-2">
+            <img src={Logo} alt="Logo" width={40} className="rounded-xl" />
             <h2 className="text-xl font-bold">Omega Tutorials</h2>
           </NavLink>
 
-          <p className="text-blue-100 leading-relaxed">Empowering students with quality education and personalized attention since 2001. Building strong academic foundations for Classes 6-12.</p>
+          <p className="text-white/70 leading-relaxed">Empowering students with quality education and personalized attention since 2001. Building strong academic foundations for Classes 9-12.</p>
 
           <div className="flex items-center gap-4 mt-2">
             <a href="https://www.facebook.com/p/OMEGA-TUTORIALS-100057223279205/" rel="noopener noreferrer" target="_blank" className="bg-gray-300/10 hover:bg-gray-200/30 p-3 rounded-full cursor-pointer transition duration-300"><Facebook size={18} />
@@ -25,19 +26,33 @@ const Footer = () => {
 
         <div className="flex flex-col gap-3">
           <h3 className="text-lg font-semibold">Quick Links</h3>
-          <div className="flex flex-col gap-2 text-blue-100">
-            <p className="hover:text-white cursor-pointer transition duration-300">Home</p>
-            <p className="hover:text-white cursor-pointer transition duration-300">About Us</p>
-            <p className="hover:text-white cursor-pointer transition duration-300">Courses</p>
-            <p className="hover:text-white cursor-pointer transition duration-300">Results</p>
-            <p className="hover:text-white cursor-pointer transition duration-300">Gallery</p>
-            <p className="hover:text-white cursor-pointer transition duration-300">Contact</p>
+          <div className="flex flex-col gap-2 text-white/70">
+            <NavLink to="/" className={({ isActive }) => `transition duration-300 hover:text-white ${ isActive ? "text-white" : ""}`}>
+              Home
+            </NavLink>
+
+            <NavLink to="/about-us" className={({ isActive }) => `transition duration-300 hover:text-white ${ isActive ? "text-white" : ""}`}>
+              About Us
+            </NavLink>
+
+            <NavLink to="/courses" className={({ isActive }) => `transition duration-300 hover:text-white ${ isActive ? "text-white" : "" }`}>
+              Courses
+            </NavLink>
+            <NavLink to="/results" className={({ isActive }) => `transition duration-300 hover:text-white ${ isActive ? "text-white" : "" }`}>
+              Results
+            </NavLink>
+            <NavLink to="/gallery" className={({ isActive }) => `transition duration-300 hover:text-white ${ isActive ? "text-white" : "" }`}>
+              Gallery
+            </NavLink>
+            <NavLink to="/contact" className={({ isActive }) => `transition duration-300 hover:text-white ${ isActive ? "text-white" : "" }`}>
+              Contact
+            </NavLink>
           </div>
         </div>
 
         <div className="flex flex-col gap-3">
           <h3 className="text-lg font-semibold">Our Courses</h3>
-          <div className="flex flex-col gap-2 text-blue-100">
+          <div className="flex flex-col gap-2 text-white/70">
             <p className="hover:text-white cursor-pointer transition duration-300">Classes 6–8 (Foundation)</p>
             <p className="hover:text-white cursor-pointer transition duration-300">Classes 9–10 (Board Prep)</p>
             <p className="hover:text-white cursor-pointer transition duration-300">Classes 11–12 (Science)</p>
@@ -47,7 +62,7 @@ const Footer = () => {
 
         <div className="flex flex-col gap-3">
           <h3 className="text-lg font-semibold">Contact Us</h3>
-          <div className="flex flex-col gap-2 text-blue-100">
+          <div className="flex flex-col gap-2 text-white/70">
             <a href="https://www.google.com/maps/place/Omega+Tutorials+-+Sector+4,+Gurgaon/@28.4736117,77.0066784,17z/data=!3m1!4b1!4m6!3m5!1s0x390d178506a7fbcf:0x173b0a33e7453e18!8m2!3d28.4736117!4d77.0092533!16s%2Fg%2F11n53fkb5v" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:text-white transition">
               <MapPin size={18} className="shrink-0" /> <span className="wrap-break-word">Sec 4 & 5 crossing, Old Railway Rd, near Panjiri Plant, Gurgaon, India</span>
             </a>
@@ -63,8 +78,16 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="border-t border-white/10 p-6 text-center text-blue-200 text-sm">© 2026 Omega Tutorials. All rights reserved.</div>
-    </div>
+      <hr className="text-white/10" id="site-footer" />
+
+      <div className="w-full flex flex-col md:flex-row items-center justify-between gap-6 px-4 md:px-12 py-6 text-blue-200">
+        <p className="text-sm">© 2026 Omega Tutorials. All rights reserved.</p>
+        <div className="flex items-center gap-4">
+          <NavLink to={'/privacy-policy'}>Privacy Policy</NavLink>
+          <NavLink to={'/terms-and-conditions'}>Terms & Conditions</NavLink>
+        </div>
+      </div>
+    </footer>
   );
 };
 

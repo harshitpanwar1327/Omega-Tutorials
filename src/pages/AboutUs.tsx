@@ -1,9 +1,8 @@
-import Footer from '../components/Footer'
-import Header from '../components/Header'
 import { motion } from 'framer-motion'
 import { Award, BookOpen, Eye, ShieldCheck, Target, Users } from 'lucide-react'
-import SectionHeading from '../components/SectionHeading'
-import WhatsappChat from '../components/WhatsappChat'
+import { lazy } from 'react'
+
+const SectionHeading = lazy(() => import('../components/SectionHeading'));
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -29,19 +28,24 @@ const trustReasons = [
 const AboutUs = () => {
   return (
     <>
-      <Header />
+      <div className="mt-15 px-4 py-30 bg-[linear-gradient(135deg,hsl(215_50%_18%),hsl(215_85%_45%))]">
+        <motion.div className="text-center flex flex-col gap-4"
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.6,
+            ease: "easeOut",
+            staggerChildren: 0.2
+          }}
+          viewport={{ once: true }}
+        >
+          <div className="self-center px-4 py-2 rounded-full text-xs font-semibold tracking-wider bg-white/10 text-white">ABOUT US</div>
+          <h1 className="text-4xl font-bold text-white">About Omega Tutorials</h1>
+          <p className="text-white/80">Empowering students with quality education and personalized attention since 2001.</p>
+        </motion.div>
+      </div>
 
       <div className='pt-18'>
-        <div className="py-20 bg-[linear-gradient(135deg,hsl(215_50%_18%),hsl(215_85%_45%))]">
-          <div className="container mx-auto px-4 lg:px-8 text-center">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-              <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-white/10 text-white mb-4">About Us</span>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">About Omega Tutorials</h1>
-              <p className="text-white/80 max-w-2xl mx-auto">Empowering students with quality education and personalized attention since 2010.</p>
-            </motion.div>
-          </div>
-        </div>
-
         <div className="py-20 bg-[hsl(210_33%_98%)]">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <motion.div
@@ -79,7 +83,7 @@ const AboutUs = () => {
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={fadeUp}
-                  className="bg-white rounded-xl p-8 shadow-[0_4px_24px_-6px_hsl(215_85%_45%_/_0.10)] transition-shadow group"
+                  className="bg-white rounded-xl p-8 shadow-[0_4px_24px_-6px_hsl(215_85%_45%/0.10)] transition-shadow group"
                 >
                   <div className="w-12 h-12 rounded-lg bg-[linear-gradient(135deg,hsl(215_85%_45%),hsl(205_80%_60%))] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <item.icon className="h-6 w-6 text-white" />
@@ -100,7 +104,7 @@ const AboutUs = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl p-8 md:p-12 shadow-[0_4px_24px_-6px_hsl(215_85%_45%_/_0.10)] border-l-4 border-[hsl(215_85%_45%)] hover:scale-102 transition-transform"
+              className="bg-white rounded-xl p-8 md:p-12 shadow-[0_4px_24px_-6px_hsl(215_85%_45%/0.10)] border-l-4 border-[hsl(215_85%_45%)] hover:scale-102 transition-transform"
             >
               <p className="text-[hsl(215_30%_15%)]/80 leading-relaxed italic text-lg mb-6">
                 "Education is not just about marks and grades — it's about building character, confidence, and a lifelong love for learning. At Omega Tutorials, we are committed to providing every student with the tools and support they need to reach their full potential. Our experienced team of educators works tirelessly to ensure each child receives individual attention and a clear path to success."
@@ -119,7 +123,7 @@ const AboutUs = () => {
             <SectionHeading badge="Our Approach" title="Teaching Methodology" subtitle="A proven system that focuses on understanding, practice, and performance." />
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
               {methodology.map((item, i) => (
-                <motion.div key={i} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white rounded-xl p-6 shadow-[0_4px_24px_-6px_hsl(215_85%_45%_/_0.10)] text-center transition-shadow group hover:scale-102 transition-transform">
+                <motion.div key={i} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white rounded-xl p-6 shadow-[0_4px_24px_-6px_hsl(215_85%_45%/0.10)] text-center group hover:scale-102 transition-all duration-300">
                   <div className="w-12 h-12 rounded-lg bg-[linear-gradient(135deg,hsl(215_85%_45%),hsl(205_80%_60%))] flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
                     <item.icon className="h-6 w-6 text-white" />
                   </div>
@@ -137,7 +141,7 @@ const AboutUs = () => {
             <SectionHeading badge="Trust" title="Why Parents Trust Us" />
             <div className="grid sm:grid-cols-2 gap-4">
               {trustReasons.map((reason, i) => (
-                <motion.div key={i} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="flex items-center gap-3 bg-white rounded-lg p-4 shadow-[0_4px_24px_-6px_hsl(215_85%_45%_/_0.10)] hover:scale-102 transition-transform">
+                <motion.div key={i} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="flex items-center gap-3 bg-white rounded-lg p-4 shadow-[0_4px_24px_-6px_hsl(215_85%_45%/0.10)] hover:scale-102 transition-transform">
                   <div className="w-8 h-8 rounded-full bg-[linear-gradient(135deg,hsl(215_85%_45%),hsl(205_80%_60%))] flex items-center justify-center shrink-0">
                     <ShieldCheck className="h-4 w-4 text-white" />
                   </div>
@@ -148,9 +152,6 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-
-      <WhatsappChat />
-      <Footer />
     </>
   )
 }
