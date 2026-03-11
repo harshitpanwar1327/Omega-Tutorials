@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { GraduationCap, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Logo from '../assets/Logo.jpg';
@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md px-8 py-4 flex items-center justify-between gap-4">
+      <div className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md p-4 md:px-8 flex items-center justify-between gap-4">
         <NavLink to="/" className="flex items-center gap-1 text-[#1162D4]">
           <img src={Logo} alt="Logo" width={40} className="rounded-xl" />
           <h2 className="text-xl font-bold">Omega Tutorials</h2>
@@ -41,7 +41,7 @@ const Header = () => {
           >
             <div className="flex items-center justify-between gap-4">
               <NavLink to="/" className="flex items-center gap-2 text-[#1162D4]" onClick={()=>setMenuOpen(!menuOpen)}>
-                <GraduationCap size={28} />
+                <img src={Logo} alt="Logo" width={40} className="rounded-xl" />
                 <h2 className="text-xl font-bold">Omega Tutorials</h2>
               </NavLink>
               <X className="cursor-pointer" onClick={()=>setMenuOpen(false)}/>

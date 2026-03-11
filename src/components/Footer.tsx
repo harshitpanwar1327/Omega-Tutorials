@@ -27,24 +27,24 @@ const Footer = () => {
         <div className="flex flex-col gap-3">
           <h3 className="text-lg font-semibold">Quick Links</h3>
           <div className="flex flex-col gap-2 text-white/70">
-            <NavLink to="/" className={({ isActive }) => `transition duration-300 hover:text-white ${ isActive ? "text-white" : ""}`}>
+            <NavLink to="/" className={({ isActive }) => `w-fit transition duration-300 hover:text-white ${ isActive ? "text-white" : ""}`}>
               Home
             </NavLink>
 
-            <NavLink to="/about-us" className={({ isActive }) => `transition duration-300 hover:text-white ${ isActive ? "text-white" : ""}`}>
+            <NavLink to="/about-us" className={({ isActive }) => `w-fit transition duration-300 hover:text-white ${ isActive ? "text-white" : ""}`}>
               About Us
             </NavLink>
 
-            <NavLink to="/courses" className={({ isActive }) => `transition duration-300 hover:text-white ${ isActive ? "text-white" : "" }`}>
+            <NavLink to="/courses" className={({ isActive }) => `w-fit transition duration-300 hover:text-white ${ isActive ? "text-white" : "" }`}>
               Courses
             </NavLink>
-            <NavLink to="/results" className={({ isActive }) => `transition duration-300 hover:text-white ${ isActive ? "text-white" : "" }`}>
+            <NavLink to="/results" className={({ isActive }) => `w-fit transition duration-300 hover:text-white ${ isActive ? "text-white" : "" }`}>
               Results
             </NavLink>
-            <NavLink to="/gallery" className={({ isActive }) => `transition duration-300 hover:text-white ${ isActive ? "text-white" : "" }`}>
+            <NavLink to="/gallery" className={({ isActive }) => `w-fit transition duration-300 hover:text-white ${ isActive ? "text-white" : "" }`}>
               Gallery
             </NavLink>
-            <NavLink to="/contact" className={({ isActive }) => `transition duration-300 hover:text-white ${ isActive ? "text-white" : "" }`}>
+            <NavLink to="/contact" className={({ isActive }) => `w-fit transition duration-300 hover:text-white ${ isActive ? "text-white" : "" }`}>
               Contact
             </NavLink>
           </div>
@@ -83,8 +83,8 @@ const Footer = () => {
       <div className="w-full flex flex-col md:flex-row items-center justify-between gap-6 px-4 md:px-12 py-6 text-blue-200">
         <p className="text-sm">© 2026 Omega Tutorials. All rights reserved.</p>
         <div className="flex items-center gap-4">
-          <NavLink to={'/privacy-policy'}>Privacy Policy</NavLink>
-          <NavLink to={'/terms-and-conditions'}>Terms & Conditions</NavLink>
+          <NavLink to={'/privacy-policy'} className="hover:text-white transition duration-300">Privacy Policy</NavLink>
+          <NavLink to={'/terms-and-conditions'} className="hover:text-white transition duration-300">Terms & Conditions</NavLink>
         </div>
       </div>
     </footer>
