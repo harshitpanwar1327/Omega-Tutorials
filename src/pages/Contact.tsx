@@ -5,14 +5,10 @@ import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
 import ClipLoader from "react-spinners/ClipLoader";
 import emailjs from "@emailjs/browser";
+import { signInWithPopup } from "firebase/auth";
+import { auth, googleProvider } from "../firebase/Firebase";
 
 const contactInfo = [
-  {
-    icon: MapPin,
-    label: "Visit Us",
-    value: "Sec 4 & 5 crossing, Old Railway Rd, near Panjiri Plant, Gurgoan, India",
-    link: "https://www.google.com/maps/place/Omega+Tutorials"
-  },
   {
     icon: Phone,
     label: "Call Us",
@@ -24,7 +20,21 @@ const contactInfo = [
     label: "Email Us",
     value: "omegatutorials2@gmail.com",
     link: "mailto:omegatutorials2@gmail.com?subject=Course%20Enquiry"
-  }
+  },
+  {
+    icon: MapPin,
+    label: "Visit Us",
+    value: "Omega Tutorials - Sector 4, First Floor, Huda Market, SCF - 33, above Kotak Mahindra Bank, Gurugram, Haryana 122001, India",
+    link: "https://maps.app.goo.gl/VyPr8bBJYi5QULEv9",
+    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.1968972820323!2d77.00667301065803!3d28.473616391179057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d178506a7fbcf%3A0x173b0a33e7453e18!2sOmega%20Tutorials%20-%20Sector%204%2C%20Gurgaon!5e0!3m2!1sen!2sus!4v1773732620755!5m2!1sen!2sus"
+  },
+  {
+    icon: MapPin,
+    label: "Visit Us",
+    value: "Omega Tutorials - Railway Road, Gurugram, Haryana 122001, India",
+    link: "https://maps.app.goo.gl/2wRFWpjZBsa8BfhU8",
+    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1180.3656794312742!2d77.01261351615211!3d28.48216430024555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19d93b2bab9f%3A0x5c70f660ecd2e06f!2sOmega%20Tutorials%20-%20Railway%20Road%2C%20Gurgaon!5e0!3m2!1sen!2sus!4v1773732535981!5m2!1sen!2sus"
+  },
 ];
 
 type ContactForm = {
@@ -44,10 +54,14 @@ const Contact = () => {
   const onSubmit = async (data: ContactForm) => {
     try {
       setLoading(true);
+      const result = await signInWithPopup(auth, googleProvider);
+      const user = result.user;
+
       await emailjs.send(
         import.meta.env.VITE_SERVICE_ID,
         import.meta.env.VITE_TEMPLATE_ID,
         {
+          email: user.email,
           name: data.name,
           phone: data.phone,
           school: data.school,
@@ -137,7 +151,7 @@ const Contact = () => {
               </div>
               <div className="flex flex-col gap-1">
                 <label className="text-xs">School Name <span className="text-red-500">*</span></label>
-                <input className="flex w-full rounded-xl border border-gray-200 bg-white py-2 px-3" type="text" placeholder="e.g., K.V. Sector-14" required
+                <input className="flex w-full rounded-xl border border-gray-200 bg-white py-2 px-3" type="text" placeholder="e.g., Kendriya Vidyalaya" required
                   {...register("school", {
                     required: "School name is required"
                   })}
@@ -185,22 +199,32 @@ const Contact = () => {
             <h2 className="text-2xl font-bold">Contact Information</h2>
             <div className="flex flex-col gap-4">
               {contactInfo.map((item, i) => (
-                <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:opacity-90 transition duration-300">
-                  <div className="w-10 h-10 rounded-lg bg-[linear-gradient(135deg,hsl(215_85%_45%),hsl(205_80%_60%))] flex items-center justify-center shrink-0">
-                    <item.icon className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-xs text-gray-500">{item.label}</p>
-                    <p className="text-sm font-medium wrap-break-word">{item.value}</p>
-                  </div>
-                </a>
+                <>
+                  <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:opacity-90 transition duration-300">
+                    <div className="w-10 h-10 rounded-lg bg-[linear-gradient(135deg,hsl(215_85%_45%),hsl(205_80%_60%))] flex items-center justify-center shrink-0">
+                      <item.icon className="h-5 w-5 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-500">{item.label}</p>
+                      <p className="text-sm font-medium wrap-break-word">{item.value}</p>
+                    </div>
+                  </a>
+
+                  {item.mapEmbed && (
+                    <div className="rounded-xl overflow-hidden shadow-[0_4px_24px_-6px_hsl(215_85%_45%/0.10)]">
+                      <iframe
+                        src={item.mapEmbed}
+                        width="100%"
+                        height="250"
+                        style={{ border: 0 }}
+                        loading="lazy"
+                        title={`Map ${i}`}
+                      />
+                    </div>
+                  )}
+                </>
               ))}
             </div>
-          </div>
-
-          {/* Map */}
-          <div className="rounded-xl overflow-hidden shadow-[0_4px_24px_-6px_hsl(215_85%_45%/0.10)]">
-            <iframe src="https://www.google.com/maps?q=28.4736117,77.0092533&z=16&output=embed" width="100%" height="300" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Omega Tutorials Location" />
           </div>
 
           {/* Coaching Hours */}
@@ -212,7 +236,7 @@ const Contact = () => {
             </div>
             <div className="flex items-center justify-between gap-4 text-sm text-[hsl(215_15%_50%)]">
               <span>Sunday</span>
-              <span className="text-black">09:00 AM – 11:30 PM</span>
+              <span className="text-black">09:00 AM – 12:30 PM</span>
             </div>
           </div>
         </motion.div>

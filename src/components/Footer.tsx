@@ -12,7 +12,7 @@ const Footer = () => {
             <h2 className="text-xl font-bold">Omega Tutorials</h2>
           </NavLink>
 
-          <p className="text-white/70 leading-relaxed">Empowering students with quality education and personalized attention since 2001. Building strong academic foundations for Classes 9-12.</p>
+          <p className="text-white/70 leading-relaxed">Empowering students with quality education and personalized attention since 2004. Building strong academic foundations for Classes 9-12.</p>
 
           <div className="flex items-center gap-4 mt-2">
             <a href="https://www.facebook.com/p/OMEGA-TUTORIALS-100057223279205/" rel="noopener noreferrer" target="_blank" className="bg-gray-300/10 hover:bg-gray-200/30 p-3 rounded-full cursor-pointer transition duration-300"><Facebook size={18} />
@@ -53,10 +53,11 @@ const Footer = () => {
         <div className="flex flex-col gap-3">
           <h3 className="text-lg font-semibold">Our Courses</h3>
           <div className="flex flex-col gap-2 text-white/70">
-            <p className="hover:text-white cursor-pointer transition duration-300">Classes 6–8 (Foundation)</p>
-            <p className="hover:text-white cursor-pointer transition duration-300">Classes 9–10 (Board Prep)</p>
-            <p className="hover:text-white cursor-pointer transition duration-300">Classes 11–12 (Science)</p>
-            <p className="hover:text-white cursor-pointer transition duration-300">Classes 11–12 (Commerce)</p>
+            <p className="hover:text-white cursor-pointer transition duration-300">Classes 9-10 (Maths & Science)</p>
+            <p className="hover:text-white cursor-pointer transition duration-300">Classes 11-12 (Maths, Physics, Chemistry & Biology)</p>
+            <p className="hover:text-white cursor-pointer transition duration-300">IIT-JEE</p>
+            <p className="hover:text-white cursor-pointer transition duration-300">NEET</p>
+            <p className="hover:text-white cursor-pointer transition duration-300">Olympiads</p>
           </div>
         </div>
 
