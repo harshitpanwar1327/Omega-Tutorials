@@ -1,0 +1,14 @@
+export { default as Yatika } from "./yatika.jpeg";
+export { default as Ishant } from "./ishant.jpeg";
+export { default as Kritagya } from "./kritagya.jpeg";
+export { default as Dhwani } from "./dhwani.jpeg";
+// export { default as Avni } from "./avni.jpeg";
+export { default as Lavnish } from "./lavnish.jpg";
+export { default as Gracy } from "./gracy.jpeg";
+export { default as Ekas } from "./ekas.jpg";
+export { default as Mitaksh } from "./mitaksh.jpg";
+export { default as Prerna } from "./prerna.jpeg";
+export { default as Gaurav } from "./gaurav.jpeg";
+export { default as Vansh } from "./vansh.jpeg";
+export { default as Dharmik } from "./dharmik.jpeg";
+export { default as Lavanya } from "./lavanya.jpeg";
