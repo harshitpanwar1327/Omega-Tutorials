@@ -2,7 +2,7 @@ export { default as Yatika } from "./yatika.jpeg";
 export { default as Ishant } from "./ishant.jpeg";
 export { default as Kritagya } from "./kritagya.jpeg";
 export { default as Dhwani } from "./dhwani.jpeg";
-// export { default as Avni } from "./avni.jpeg";
+export { default as Avni } from "./avni.jpeg";
 export { default as Lavnish } from "./lavnish.jpg";
 export { default as Gracy } from "./gracy.jpeg";
 export { default as Ekas } from "./ekas.jpg";

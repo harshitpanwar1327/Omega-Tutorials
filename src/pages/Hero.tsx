@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, Calculator, ClipboardCheck, FlaskConical, GraduationCap, Heart, Star, Users } from "lucide-react";
+import { ArrowRight, BookOpen, ClipboardCheck, FlaskConical, GraduationCap, Heart, Star, Users } from "lucide-react";
 import { Link } from 'react-router-dom';
 import heroBg from "../assets/hero-bg.webp";
 import { motion } from "framer-motion";
@@ -22,7 +22,6 @@ const highlights = [
 ];
 
 const courses = [
-  { icon: Calculator, title: "Classes 6–8", desc: "Foundation building with strong concepts in Maths, Science & English.", color: "bg-[hsl(205_80%_60%)]/10 text-[hsl(205_80%_60%)]" },
   { icon: GraduationCap, title: "Classes 9–10", desc: "Board exam preparation with comprehensive study plans.", color: "bg-[hsl(215_85%_45%)]/10 text-[hsl(215_85%_45%)]" },
   { icon: FlaskConical, title: "Classes 11–12", desc: "Advanced Science & Commerce coaching for board and competitive exams.", color: "bg-[hsl(45_93%_55%)]/20 text-[hsl(215_30%_15%)]" },
 ];
@@ -59,7 +58,7 @@ const Hero = () => {
                 <span className="text-[hsl(45_93%_55%)]">Omega Tutorials</span>
               </h1>
               <p className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl">
-                Expert Guidance for Classes 6–12 | Personalized Coaching | Proven Results in Gurgaon
+                Expert Guidance for Classes 9–12 | Personalized Coaching | Proven Results in Gurgaon
               </p>
 
               <div className="flex flex-wrap gap-4 mt-8">

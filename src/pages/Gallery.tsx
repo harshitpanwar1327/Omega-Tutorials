@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { X } from "lucide-react"
 import { useState } from "react"
+import * as Icons from '../assets/gallery'
 
 const categories = ["All", "Classroom", "Infrastructure", "Results", "Events"];
 
@@ -9,10 +10,10 @@ const galleryItems = [
   { src: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&h=400&fit=crop", title: "Concept-Based Teaching in Action", cat: "Classroom" },
   { src: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=600&h=400&fit=crop", title: "Interactive Doubt Solving Session", cat: "Classroom" },
   { src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&h=400&fit=crop", title: "Personal Attention for Every Student", cat: "Classroom" },
-  { src: "https://images.unsplash.com/photo-1588072432836-e10032774350?w=600&h=400&fit=crop", title: "Modern Classroom Environment", cat: "Infrastructure" },
-  { src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop", title: "Comfortable Learning Spaces", cat: "Infrastructure" },
-  { src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop", title: "Well-Equipped Study Rooms", cat: "Infrastructure" },
-  { src: "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600&h=400&fit=crop", title: "Student-Friendly Infrastructure", cat: "Infrastructure" },
+  { src: Icons.Infrastructure1, title: "Modern Classroom Environment", cat: "Infrastructure" },
+  { src: Icons.Infrastructure2, title: "Comfortable Learning Spaces", cat: "Infrastructure" },
+  { src: Icons.Infrastructure3, title: "Well-Equipped Study Rooms", cat: "Infrastructure" },
+  { src: Icons.Infrastructure4, title: "Reception", cat: "Infrastructure" },
   { src: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&h=400&fit=crop", title: "Our Star Performers", cat: "Results" },
   { src: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=600&h=400&fit=crop", title: "Top Results Achieved", cat: "Results" },
   { src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&h=400&fit=crop", title: "Celebrating Student Success", cat: "Results" },

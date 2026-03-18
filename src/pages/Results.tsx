@@ -57,7 +57,7 @@ const toppers = [
     subjects: [
       { name: "Mathematics", marks: "99/100" },
     ],
-    photo: "/placeholder.svg",
+    photo: Icons.Avni,
   },
   {
     name: "Lavnish Janghu",
@@ -119,7 +119,7 @@ const toppers = [
   },
   {
     name: "Dharmik Sivakumar",
-    class: "Class 12",
+    class: "Class 10",
     subjects: [
       { name: "Mathematics", marks: "99/100" },
     ],
@@ -137,12 +137,12 @@ const toppers = [
 ];
 
 const testimonials = [
-  { name: "Aarav Mehta", class: "Class 10 — 97.2%", text: "Omega Tutorials transformed my approach to studying. The regular tests and personalized feedback helped me achieve my dream score." },
-  { name: "Sneha Patel", class: "Class 12 (Science) — 94.8%", text: "The faculty at Omega is exceptional. They made complex Physics and Chemistry concepts easy to understand." },
-  { name: "Mrs. Kavita Singh", class: "Parent", text: "As a parent, I appreciate the transparent communication and regular progress reports. My daughter improved significantly." },
-  { name: "Rohit Jain", class: "Class 10 — 96.4%", text: "The small batch sizes meant I always got attention when I was stuck. Highly recommend Omega Tutorials!" },
-  { name: "Ananya Gupta", class: "Class 12 (Commerce) — 93.6%", text: "The Accountancy and Economics coaching here is top-notch. I owe my results to Omega Tutorials." },
-  { name: "Mr. Deepak Sharma", class: "Parent", text: "Both my children studied at Omega and both scored in the top 5% of their boards. The quality is consistent." },
+  { name: "Student", class: "Class 10 — (Batch 2025)", text: "Omega Tutorials is an excellent coaching center in Gurgaon and truly deserves its high rating. The teachers are highly knowledgeable, supportive, and explain concepts in a very clear and practical way. Doubts are always encouraged, and individual attention is given to students, which really helps in building confidence and improving performance. I would highly recommend Omega Tutorials to anyone looking for quality education and reliable guidance." },
+  { name: "Aryan Chaudhary", class: "Student", text: "Omega tutorials are truly a 100/10! The teachers are incredibly understanding, and their teaching methods are outstanding. They don’t just teach math and science—they also focus on moral values and skill development, which makes Omega Tutorials deserve another 100/10. The motivation they provide is truly inspiring! Students genuinely enjoy studying here. Best institute I’ve ever studied at!" },
+  { name: "Mr. Shashi Jangra", class: "Parent", text: "Omega Tutorials has played a huge role in my child's outstanding performance. Both teachers Yogesh sir and Deepak sir are extremely dedicated, supportive and explain concepts in a very clear and practical manner." },
+  { name: "Harshit Panwar", class: "Student", text: "I studied at Omega Tutorials and had a very good experience. The teaching quality is excellent and the environment is very supportive. Special thanks to Yogesh Sir and Deepak Sir — both are amazing teachers who explain concepts very clearly and are always ready to help with doubts. Their guidance really helped me improve a lot. I highly recommend Omega Tutorials to any student looking for quality coaching." },
+  { name: "Vrinda Sharma", class: "Student", text: "I am blessed to be a part of Omega as all the teachers have best comprehensive skills, their teaching techniques are easily understandable. I have a wonderful experience to be studying in this institution. Moreover, this place has a homely atmosphere. Both my teachers- Yogesh sir and Deepak sir have given their the best in explaining each and every concept and many of the life lessons. I would suggest my dear friends not to hesitate in opting for Omega Tutorials." },
+  { name: "Mr. Hemant", class: "Parent", text: "I have been teaching my son at Omega for 2 years now. Sir (entire Omega team) really works hard for the children.I see his class style, his way of taking exams, his way of explaining, everything is understandable to the children." },
 ];
 
 const Results = () => {
