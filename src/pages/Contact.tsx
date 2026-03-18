@@ -199,8 +199,8 @@ const Contact = () => {
             <h2 className="text-2xl font-bold">Contact Information</h2>
             <div className="flex flex-col gap-4">
               {contactInfo.map((item, i) => (
-                <>
-                  <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:opacity-90 transition duration-300">
+                <div key={i}>
+                  <a href={item.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:opacity-90 transition duration-300">
                     <div className="w-10 h-10 rounded-lg bg-[linear-gradient(135deg,hsl(215_85%_45%),hsl(205_80%_60%))] flex items-center justify-center shrink-0">
                       <item.icon className="h-5 w-5 text-white" />
                     </div>
@@ -222,7 +222,7 @@ const Contact = () => {
                       />
                     </div>
                   )}
-                </>
+                </div>
               ))}
             </div>
           </div>

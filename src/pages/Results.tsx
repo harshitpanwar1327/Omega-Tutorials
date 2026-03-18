@@ -192,7 +192,7 @@ const Results = () => {
         >
           <div className="px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase bg-[hsl(215_85%_45%)]/10 text-[hsl(215_85%_45%)]">Toppers</div>
           <h2 className="text-3xl md:text-4xl font-bold text-[hsl(215_30%_15%)] text-center">Our Star Performers</h2>
-          <p className='text-gray-500'>Students who achieved outstanding results with Omega Tutorials.</p>
+          <p className='text-gray-500 text-center'>Students who achieved outstanding results with Omega Tutorials.</p>
         </motion.div>
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {toppers.map((t, i) => (

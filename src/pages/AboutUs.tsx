@@ -121,7 +121,7 @@ const AboutUs = () => {
         >
           <div className="px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase bg-[hsl(215_85%_45%)]/10 text-[hsl(215_85%_45%)]">Our Approach</div>
           <h2 className="text-3xl md:text-4xl font-bold text-[hsl(215_30%_15%)] text-center">Teaching Methodology</h2>
-          <p className='text-gray-500'>A proven system that focuses on understanding, practice, and performance.</p>
+          <p className='text-gray-500 text-center'>A proven system that focuses on understanding, practice, and performance.</p>
         </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {methodology.map((item, i) => (
