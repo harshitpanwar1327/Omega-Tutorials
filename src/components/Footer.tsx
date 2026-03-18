@@ -53,19 +53,23 @@ const Footer = () => {
         <div className="flex flex-col gap-3">
           <h3 className="text-lg font-semibold">Our Courses</h3>
           <div className="flex flex-col gap-2 text-white/70">
-            <p className="hover:text-white cursor-pointer transition duration-300">Classes 9-10 (Maths & Science)</p>
-            <p className="hover:text-white cursor-pointer transition duration-300">Classes 11-12 (Maths, Physics, Chemistry & Biology)</p>
-            <p className="hover:text-white cursor-pointer transition duration-300">IIT-JEE</p>
-            <p className="hover:text-white cursor-pointer transition duration-300">NEET</p>
-            <p className="hover:text-white cursor-pointer transition duration-300">Olympiads</p>
+            <NavLink to={'/courses'} className="hover:text-white cursor-pointer w-fit transition duration-300">Classes 9-10 (Maths & Science)</NavLink>
+            <NavLink to={'/courses'} className="hover:text-white cursor-pointer w-fit transition duration-300">Classes 11-12 (Maths, Physics, Chemistry & Biology)</NavLink>
+            <NavLink to={'/courses'} className="hover:text-white cursor-pointer w-fit transition duration-300">IIT-JEE</NavLink>
+            <NavLink to={'/courses'} className="hover:text-white cursor-pointer w-fit transition duration-300">NEET</NavLink>
+            <NavLink to={'/courses'} className="hover:text-white cursor-pointer w-fit transition duration-300">Olympiads</NavLink>
           </div>
         </div>
 
         <div className="flex flex-col gap-3">
           <h3 className="text-lg font-semibold">Contact Us</h3>
           <div className="flex flex-col gap-2 text-white/70">
-            <a href="https://www.google.com/maps/place/Omega+Tutorials+-+Sector+4,+Gurgaon/@28.4736117,77.0066784,17z/data=!3m1!4b1!4m6!3m5!1s0x390d178506a7fbcf:0x173b0a33e7453e18!8m2!3d28.4736117!4d77.0092533!16s%2Fg%2F11n53fkb5v" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:text-white transition">
-              <MapPin size={18} className="shrink-0" /> <span className="wrap-break-word">Sec 4 & 5 crossing, Old Railway Rd, near Panjiri Plant, Gurgaon, India</span>
+            <a href="https://maps.app.goo.gl/VyPr8bBJYi5QULEv9" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:text-white transition">
+              <MapPin size={18} className="shrink-0" /> <span className="wrap-break-word">Omega Tutorials - Sector 4</span>
+            </a>
+
+            <a href="https://maps.app.goo.gl/2wRFWpjZBsa8BfhU8" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:text-white transition">
+              <MapPin size={18} className="shrink-0" /> <span className="wrap-break-word">Omega Tutorials - Railway Road</span>
             </a>
 
             <a href="tel:+919868495901" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:text-white transition">
