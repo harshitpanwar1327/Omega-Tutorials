@@ -27,50 +27,34 @@ const courses = [
 ];
 
 const testimonials = [
-  { name: "Priya Sharma", class: "Class 10", text: "Omega Tutorials helped me score 95% in my board exams. The teachers are incredibly supportive!", rating: 5 },
-  { name: "Rahul Verma", class: "Class 12 (Science)", text: "The small batch size made all the difference. I got personal attention whenever I needed it.", rating: 5 },
-  { name: "Anita Gupta", class: "Parent", text: "My son's confidence and grades both improved significantly after joining Omega Tutorials.", rating: 5 },
+  { name: "Divyansh Tripathi", class: "Student", text: "Best tution in gurugram for a reason. 29 years of experience is coming true to make toppers. With it the place have all the things a childern needed.", rating: 5 },
+  { name: "Simran Sohal", class: "Student", text: "I have studied 3 years at Omega. 10th-12th. It's the best coaching institute for maths. Yogesh sir is an amazing teacher and is well equipped with the changing patterns of papers every year. He provides notes for all chapters which makes it easy to study as one doesn't need to refer to multiple books. I have had a wonderful experience here.", rating: 5 },
+  { name: "Mr. Harandra Kumar", class: "Parent", text: "I would like to express my heartfelt gratitude to Omega Tutorials for the incredible role they have played in my son's academic journey and overall development. The dedication, professionalism, and teaching quality provided by the faculty are truly commendable.", rating: 5 },
 ];
 
 const Hero = () => {
-
   return (
     <>
-      <div className='pt-18'>  
-        {/* landing section */}
-        <div className="relative min-h-[90vh] flex items-center overflow-hidden">
-          <div className="absolute inset-0">
-            <img src={heroBg} alt="Students studying at Omega Tutorials" className="w-full h-full object-cover" loading='eager' fetchPriority='high' decoding='async'/>
-            <div className="absolute inset-0 bg-[linear-gradient(135deg,hsl(215_50%_18%),hsl(215_85%_45%))] opacity-80"></div>
-          </div>
-          <div className="relative max-w-7xl px-4 lg:px-18 py-20">
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-              className="max-w-3xl"
-            >
-              <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-[hsl(45_93%_55%)]/20 text-[hsl(45_93%_55%)] mb-6">
-                Gurgaon's Trusted Coaching Centre
-              </span>
-              <h1 className="font-['Space_Grotesk'] text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                Build Strong Academic Foundations with{" "}
-                <span className="text-[hsl(45_93%_55%)]">Omega Tutorials</span>
-              </h1>
-              <p className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl">
-                Expert Guidance for Classes 9–12 | Personalized Coaching | Proven Results in Gurgaon
-              </p>
+      <div className="mt-15 relative min-h-[95vh] flex items-center">
+        <div className="absolute inset-0">
+          <img src={heroBg} alt="Students studying at Omega Tutorials" className="w-full h-full object-cover" loading='eager' fetchPriority='high' decoding='async'/>
+          <div className="absolute inset-0 bg-[linear-gradient(135deg,hsl(215_50%_18%),hsl(215_85%_45%))] opacity-80"></div>
+        </div>
 
-              <div className="flex flex-wrap gap-4 mt-8">
-                <Link to="/contact">
-                  <button className="flex items-center bg-[linear-gradient(135deg,hsl(45_93%_55%),hsl(35_95%_55%))] text-white font-bold text-base px-8 py-3 rounded-lg shadow-[0_12px_40px_-10px_hsl(215_85%_45%/0.18)] hover:scale-105 transition-transform" aria-label="Enroll Now">
-                    Enroll Now
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </button>
-                </Link>
-              </div>
-            </motion.div>
-          </div>
+        <div className="relative py-6 lg:py-24 px-4 lg:px-16">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="max-w-3xl flex flex-col gap-6"
+          >
+            <div className="self-start px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase bg-[hsl(45_93%_55%)]/20 text-[hsl(45_93%_55%)]">Gurugram's Trusted Coaching Centre</div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">Build Strong Academic Foundations with{" "}<span className="text-[hsl(45_93%_55%)]">Omega Tutorials</span></h1>
+            <p className="text-lg md:text-xl text-white/80 max-w-2xl">Expert Guidance for Classes 9–12 | Personalized Coaching | Proven Results in Gurgaon</p>
+            <NavLink to={'/contact'} className="self-start flex items-center gap-2 bg-[linear-gradient(135deg,hsl(45_93%_55%),hsl(35_95%_55%))] text-white font-semibold px-8 py-3 rounded-lg shadow-[0_12px_40px_-10px_hsl(215_85%_45%/0.18)] hover:scale-105 transition duration-300">
+              Enroll Now <ArrowRight className="h-5 w-5" />
+            </NavLink>
+          </motion.div>
         </div>
       </div>
 
@@ -149,16 +133,16 @@ const Hero = () => {
         </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonials.map((t, i) => (
-            <motion.div key={i} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white rounded-xl p-8 shadow-[0_4px_24px_-6px_hsl(215_85%_45%/0.10)]">
-              <div className="flex gap-1 mb-4">
+            <motion.div key={i} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white rounded-xl p-8 shadow-[0_4px_24px_-6px_hsl(215_85%_45%/0.10)] flex flex-col gap-4">
+              <div className="flex gap-1">
                 {Array.from({ length: t.rating }).map((_, j) => (
                   <Star key={j} className="h-4 w-4 fill-[hsl(45_93%_55%)] text-[hsl(45_93%_55%)]" />
                 ))}
               </div>
-              <p className="text-[hsl(215_30%_15%)]/80 text-sm mb-5 italic">"{t.text}"</p>
+              <p className="text-gray-500 text-sm italic">"{t.text}"</p>
               <div>
-                <p className="font-semibold">{t.name}</p>
-                <p className="text-xs text-[hsl(215_15%_50%)]">{t.class}</p>
+                <p className="text-sm font-semibold">{t.name}</p>
+                <p className="text-xs text-gray-500">{t.class}</p>
               </div>
             </motion.div>
           ))}
@@ -171,10 +155,10 @@ const Hero = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-[hsl(0_0%_100%)] text-center">Ready to Excel Academically?</h2>
           <p className="text-[hsl(0_0%_100%)]/80 max-w-xl mx-auto text-center">oin hundreds of successful students at Omega Tutorials. Limited seats available for the new academic session.</p>
           <div className="flex items-center gap-4 mt-4">
-            <NavLink to={'/contact'} className="flex items-center gap-2 bg-[linear-gradient(135deg,hsl(45_93%_55%),hsl(35_95%_55%))] text-black font-semibold px-8 py-3 rounded-lg shadow-[0_12px_40px_-10px_hsl(215_85%_45%/0.18)] hover:scale-105 transition duration-300">
+            <NavLink to={'/contact'} className="flex items-center gap-2 bg-[linear-gradient(135deg,hsl(45_93%_55%),hsl(35_95%_55%))] text-white font-semibold px-8 py-3 rounded-lg shadow-[0_12px_40px_-10px_hsl(215_85%_45%/0.18)] hover:scale-105 transition duration-300">
               Enroll Now <ArrowRight className="h-5 w-5" />
             </NavLink>
-            <NavLink to={'/courses'} className="bg-white/10 text-black font-semibold px-8 py-3 border border-white/40 rounded-lg shadow-[0_12px_40px_-10px_hsl(215_85%_45%/0.18)] hover:scale-105 transition duration-300">
+            <NavLink to={'/courses'} className="bg-white/10 text-white font-semibold px-8 py-3 border border-white/40 rounded-lg shadow-[0_12px_40px_-10px_hsl(215_85%_45%/0.18)] hover:scale-105 transition duration-300">
               View Courses
             </NavLink>
           </div>
