@@ -7,6 +7,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 import emailjs from "@emailjs/browser";
 import { signInWithPopup } from "firebase/auth";
 import { auth, googleProvider } from "../firebase/Firebase";
+import { Helmet } from "react-helmet-async";
 
 const contactInfo = [
   {
@@ -81,9 +82,20 @@ const Contact = () => {
   };
   
   return (
-    <>    
+    <>
+      <Helmet>
+        <title>Contact Omega Tutorials | Best Coaching Institute in Gurugram</title>
+        <meta  name="description" content="Contact Omega Tutorials in Gurugram for Class 9–12, IIT-JEE & NEET coaching. Call, visit our centers, or send enquiry online." />
+        <meta name="keywords" content="Omega Tutorials contact, coaching institute Gurugram contact, tuition near me, IIT JEE coaching Gurgaon contact, NEET coaching Gurgaon" />
+        <meta property="og:title" content="Contact Omega Tutorials Gurugram" />
+        <meta property="og:description" content="Get in touch with Omega Tutorials for admissions, fees, and course details." />
+        <meta property="og:type" content="website" />
+        <meta name="geo.region" content="IN-HR" />
+        <meta name="geo.placename" content="Gurugram" />
+      </Helmet>
+
       <div className="mt-15 px-4 py-30 bg-[linear-gradient(135deg,hsl(215_50%_18%),hsl(215_85%_45%))]">
-        <motion.div className="text-center flex flex-col gap-4"
+        <motion.div className="text-center flex flex-col gap-4 mx-auto max-w-4xl"
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
@@ -94,8 +106,8 @@ const Contact = () => {
           viewport={{ once: true }}
         >
           <div className="self-center px-4 py-2 rounded-full text-xs font-semibold tracking-wider bg-white/10 text-white">CONTACT US</div>
-          <h1 className="text-4xl font-bold text-white">Get in Touch</h1>
-          <p className="text-white/80">Have questions? We're here to help you start your academic journey.</p>
+          <h1 className="text-4xl font-bold text-white">Contact Omega Tutorials – Best Coaching Institute in Gurugram</h1>
+          <p className="text-white/80">Looking for the best coaching institute in Gurugram? Contact Omega Tutorials today for expert guidance in Classes 9–12, IIT-JEE, and NEET preparation. Visit our centers in Sector 4 and Railway Road or call us for admission details.</p>
         </motion.div>
       </div>
 

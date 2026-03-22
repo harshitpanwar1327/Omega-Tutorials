@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import { ArrowRight, Atom, Award, BookOpen, Calculator, CheckCircle, ClipboardCheck, FlaskConical, HelpCircle, Target, TrendingUp } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { Helmet } from "react-helmet-async"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -27,7 +28,7 @@ const courseData = [
   {
     title: "IIT-JEE",
     badge: "Competitive",
-    desc: "Comprehensive preparation for JEE Main & Advanced with concept-driven teaching and intensive problem solving.",
+    desc: "Best IIT-JEE coaching in Gurugram with concept-based learning, advanced problem solving, and expert faculty for JEE Main & Advanced.",
     icon: Target,
     color: "from-[#4DA6EB] to-[#0F5BD3]",
     subjects: ["Mathematics", "Physics", "Chemistry"],
@@ -62,8 +63,13 @@ const features = [
 const Courses = () => {
   return (
     <>
+      <Helmet>
+        <title>Coaching Classes in Gurugram | IIT JEE & NEET Coaching - Omega Tutorials</title>
+        <meta name="description" content="Best coaching classes in Gurugram for Classes 9–12, IIT-JEE & NEET. Experienced teachers, small batches, and proven results." />
+      </Helmet>
+
       <div className="mt-15 px-4 py-30 bg-[linear-gradient(135deg,hsl(215_50%_18%),hsl(215_85%_45%))]">
-        <motion.div className="text-center flex flex-col gap-4"
+        <motion.div className="text-center flex flex-col gap-4 mx-auto max-w-4xl"
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
@@ -74,8 +80,8 @@ const Courses = () => {
           viewport={{ once: true }}
         >
           <div className="self-center px-4 py-2 rounded-full text-xs font-semibold tracking-wider bg-white/10 text-white">COURSES</div>
-          <h1 className="text-4xl font-bold text-white">Our Academic Programs</h1>
-          <p className="text-white/80">Comprehensive courses designed for every grade level with expert faculty and proven results.</p>
+          <h1 className="text-4xl font-bold text-white">Coaching Classes in Gurugram for Classes 9–12, IIT-JEE & NEET</h1>
+          <p className="text-white/80">Join the best coaching institute in Gurugram offering expert coaching for Maths, Science, IIT-JEE, and NEET with experienced faculty and proven results.</p>
         </motion.div>
       </div>
 
@@ -114,10 +120,10 @@ const Courses = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className='flex flex-col items-center gap-4'
+          className='flex flex-col items-center gap-4 mx-auto max-w-4xl'
         >
           <div className="px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase bg-[hsl(215_85%_45%)]/10 text-[hsl(215_85%_45%)]">Features</div>
-          <h2 className="text-3xl md:text-4xl font-bold text-[hsl(215_30%_15%)] text-center">What Makes Our Courses Special</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-[hsl(215_30%_15%)] text-center">Why Our Coaching Classes in Gurugram Stand Out</h2>
         </motion.div>
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {features.map((f, i) => (
@@ -137,12 +143,17 @@ const Courses = () => {
       {/* CTA */}
       <div className="py-12 lg:py-24 px-4 lg:px-16 bg-[linear-gradient(135deg,hsl(215_85%_45%),hsl(205_80%_60%))]">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className='flex flex-col items-center gap-4'>
-          <h2 className="text-3xl md:text-4xl font-bold text-[hsl(0_0%_100%)] text-center">Enroll Today & Start Your Journey</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-[hsl(0_0%_100%)] text-center">Join the Best Coaching Classes in Gurugram Today</h2>
           <p className="text-[hsl(0_0%_100%)]/80 max-w-xl mx-auto text-center">Limited seats available. Secure your spot for the upcoming academic session.</p>
           <NavLink to={'/contact'} className="flex items-center gap-2 bg-[linear-gradient(135deg,hsl(45_93%_55%),hsl(35_95%_55%))] text-black font-bold px-8 py-3 mt-4 rounded-lg shadow-[0_12px_40px_-10px_hsl(215_85%_45%/0.18)] hover:scale-105 transition duration-300">
             Enroll Now <ArrowRight className="h-5 w-5" />
           </NavLink>
         </motion.div>
+      </div>
+
+      <div className="hidden">
+        <h2>Best Coaching Classes in Gurugram</h2>
+        <p>Omega Tutorials provides top coaching classes in Gurugram for students of Classes 9–12 along with IIT-JEE and NEET preparation. Our experienced teachers and structured programs help students achieve excellent results.</p>
       </div>
     </>
   )

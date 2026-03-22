@@ -2,6 +2,7 @@ import { ArrowRight, Atom, Award, BookOpen, Calculator, ClipboardCheck, FlaskCon
 import { Link, NavLink } from 'react-router-dom';
 import heroBg from "../assets/hero-bg.webp";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -27,7 +28,7 @@ const courses = [
 ];
 
 const testimonials = [
-  { name: "Divyansh Tripathi", class: "Student", text: "Best tution in gurugram for a reason. 29 years of experience is coming true to make toppers. With it the place have all the things a childern needed.", rating: 5 },
+  { name: "Divyansh Tripathi", class: "Student", text: "Best tution in gurugram for a reason. 29 years of experience is coming true to make toppers. With it the place have all the things a children needed.", rating: 5 },
   { name: "Simran Sohal", class: "Student", text: "I have studied 3 years at Omega. 10th-12th. It's the best coaching institute for maths. Yogesh sir is an amazing teacher and is well equipped with the changing patterns of papers every year. He provides notes for all chapters which makes it easy to study as one doesn't need to refer to multiple books. I have had a wonderful experience here.", rating: 5 },
   { name: "Mr. Harandra Kumar", class: "Parent", text: "I would like to express my heartfelt gratitude to Omega Tutorials for the incredible role they have played in my son's academic journey and overall development. The dedication, professionalism, and teaching quality provided by the faculty are truly commendable.", rating: 5 },
 ];
@@ -35,9 +36,14 @@ const testimonials = [
 const Hero = () => {
   return (
     <>
+      <Helmet>
+        <title>Best Coaching Classes in Gurugram | Omega Tutorials</title>
+        <meta name="description" content="Top coaching institute in Gurugram for Maths, Science, IIT-JEE & NEET. Experienced teachers and proven results." />
+      </Helmet>
+
       <div className="mt-15 relative min-h-[95vh] flex items-center">
         <div className="absolute inset-0">
-          <img src={heroBg} alt="Students studying at Omega Tutorials" className="w-full h-full object-cover" loading='eager' fetchPriority='high' decoding='async'/>
+          <img src={heroBg} alt="Students studying at best coaching classes in Gurugram - Omega Tutorials" className="w-full h-full object-cover" loading='eager' fetchPriority='high' decoding='async'/>
           <div className="absolute inset-0 bg-[linear-gradient(135deg,hsl(215_50%_18%),hsl(215_85%_45%))] opacity-80"></div>
         </div>
 
@@ -49,9 +55,9 @@ const Hero = () => {
             className="max-w-3xl flex flex-col gap-6"
           >
             <div className="self-start px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase bg-[hsl(45_93%_55%)]/20 text-[hsl(45_93%_55%)]">Gurugram's Trusted Coaching Centre</div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">Build Strong Academic Foundations with{" "}<span className="text-[hsl(45_93%_55%)]">Omega Tutorials</span></h1>
-            <p className="text-lg md:text-xl text-white/80 max-w-2xl">Expert Guidance for Classes 9–12 | Personalized Coaching | Proven Results in Gurgaon</p>
-            <NavLink to={'/contact'} className="self-start flex items-center gap-2 bg-[linear-gradient(135deg,hsl(45_93%_55%),hsl(35_95%_55%))] text-white font-semibold px-8 py-3 rounded-lg shadow-[0_12px_40px_-10px_hsl(215_85%_45%/0.18)] hover:scale-105 transition duration-300">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">Best Coaching Classes in Gurugram for Classes 9–12{" "}<span className="text-[hsl(45_93%_55%)]">Omega Tutorials</span></h1>
+            <p className="text-lg md:text-xl text-white/80 max-w-2xl">Top coaching institute in Gurugram for Maths, Science, IIT-JEE & NEET. Experienced teachers, small batches, and proven results.</p>
+            <NavLink to={'/contact'} aria-label="Enroll in coaching classes in Gurugram" className="self-start flex items-center gap-2 bg-[linear-gradient(135deg,hsl(45_93%_55%),hsl(35_95%_55%))] text-white font-semibold px-8 py-3 rounded-lg shadow-[0_12px_40px_-10px_hsl(215_85%_45%/0.18)] hover:scale-105 transition duration-300">
               Enroll Now <ArrowRight className="h-5 w-5" />
             </NavLink>
           </motion.div>
@@ -65,10 +71,10 @@ const Hero = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className='flex flex-col items-center gap-4'
+          className='flex flex-col items-center gap-4 mx-auto max-w-4xl'
         >
           <div className="px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase bg-[hsl(215_85%_45%)]/10 text-[hsl(215_85%_45%)]">Why Choose Us</div>
-          <h2 className="text-3xl md:text-4xl font-bold text-[hsl(215_30%_15%)] text-center">Why Students & Parents Trust Omega Tutorials</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-[hsl(215_30%_15%)] text-center">Why Omega Tutorials is the Best Coaching Institute in Gurugram</h2>
           <p className='text-gray-500 text-center'>We focus on building strong foundations and empowering students to achieve academic excellence.</p>
         </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -93,10 +99,10 @@ const Hero = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className='flex flex-col items-center gap-4'
+          className='flex flex-col items-center gap-4 mx-auto max-w-4xl'
         >
           <div className="px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase bg-[hsl(215_85%_45%)]/10 text-[hsl(215_85%_45%)]">Our Courses</div>
-          <h2 className="text-3xl md:text-4xl font-bold text-[hsl(215_30%_15%)] text-center">Comprehensive Academic Programs</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-[hsl(215_30%_15%)] text-center">Coaching Courses in Gurugram for Classes 9–12, IIT-JEE & NEET</h2>
           <p className='text-gray-500 text-center'>Structured courses designed for every grade level with expert faculty.</p>
         </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -125,10 +131,10 @@ const Hero = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className='flex flex-col items-center gap-4'
+          className='flex flex-col items-center gap-4 mx-auto max-w-4xl'
         >
           <div className="px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase bg-[hsl(215_85%_45%)]/10 text-[hsl(215_85%_45%)]">Testimonials</div>
-          <h2 className="text-3xl md:text-4xl font-bold text-[hsl(215_30%_15%)] text-center">What Our Students & Parents Say</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-[hsl(215_30%_15%)] text-center">Reviews of Omega Tutorials – Top Coaching in Gurugram</h2>
           <p className='text-gray-500 text-center'>Real stories from real families who trust Omega Tutorials.</p>
         </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -163,6 +169,12 @@ const Hero = () => {
             </NavLink>
           </div>
         </motion.div>
+      </div>
+
+      {/* Hidden SEO */}
+      <div className="hidden">
+        <h2>Best Coaching Classes in Gurugram</h2>
+        <p>Omega Tutorials is one of the best coaching institutes in Gurugram offering expert guidance for Maths, Science, IIT-JEE, and NEET preparation. Our experienced faculty, small batch sizes, and personalized attention help students achieve excellent academic results.</p>
       </div>
     </>
   )
