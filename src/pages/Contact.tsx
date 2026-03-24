@@ -136,8 +136,8 @@ const Contact = () => {
           ) : (
             <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
               <div className="flex flex-col gap-1">
-                <label className="text-xs">Full Name <span className="text-red-500">*</span></label>
-                <input className="flex w-full rounded-xl border border-gray-200 bg-white py-2 px-3" placeholder="Enter your full name" required
+                <label htmlFor="name" className="text-xs">Full Name <span className="text-red-500">*</span></label>
+                <input id="name" className="flex w-full rounded-xl border border-gray-200 bg-white py-2 px-3" placeholder="Enter your full name" required
                   {...register("name", {
                     required: "Name is required",
                     pattern: {
@@ -149,8 +149,8 @@ const Contact = () => {
                 {errors.name && (<p className="text-red-500 text-xs">{errors.name.message}</p>)}
               </div>
               <div className="flex flex-col gap-1">
-                <label className="text-xs">Phone Number <span className="text-red-500">*</span></label>
-                <input className="flex w-full rounded-xl border border-gray-200 bg-white py-2 px-3" type="tel" inputMode="numeric" maxLength={13} placeholder="+91 XXXXX XXXXX" required
+                <label htmlFor="phone" className="text-xs">Phone Number <span className="text-red-500">*</span></label>
+                <input id="phone" className="flex w-full rounded-xl border border-gray-200 bg-white py-2 px-3" type="tel" inputMode="numeric" maxLength={13} placeholder="+91 XXXXX XXXXX" required
                   {...register("phone", {
                     required: "Phone number is required",
                     pattern: {
@@ -162,8 +162,8 @@ const Contact = () => {
                 {errors.phone && (<p className="text-red-500 text-xs">{errors.phone.message}</p>)}
               </div>
               <div className="flex flex-col gap-1">
-                <label className="text-xs">School Name <span className="text-red-500">*</span></label>
-                <input className="flex w-full rounded-xl border border-gray-200 bg-white py-2 px-3" type="text" placeholder="e.g., Kendriya Vidyalaya" required
+                <label htmlFor="school" className="text-xs">School Name <span className="text-red-500">*</span></label>
+                <input id="school" className="flex w-full rounded-xl border border-gray-200 bg-white py-2 px-3" type="text" placeholder="e.g., Kendriya Vidyalaya" required
                   {...register("school", {
                     required: "School name is required"
                   })}
@@ -171,8 +171,8 @@ const Contact = () => {
                 {errors.school && (<p className="text-red-500 text-xs">{errors.school.message}</p>)}
               </div>
               <div className="flex flex-col gap-1">
-                <label className="text-xs">Class <span className="text-red-500">*</span></label>
-                <select className="flex w-full rounded-xl border border-gray-200 bg-white py-2 px-3" required
+                <label htmlFor="class" className="text-xs">Class <span className="text-red-500">*</span></label>
+                <select id="class" className="flex w-full rounded-xl border border-gray-200 bg-white py-2 px-3" required
                   {...register("class", {
                     required: "Please select a class"
                   })}
@@ -186,8 +186,8 @@ const Contact = () => {
                 {errors.class && (<p className="text-red-500 text-xs">{errors.class.message}</p>)}
               </div>
               <div className="flex flex-col gap-1">
-                <label className="text-xs">Message</label>
-                <textarea className="flex w-full rounded-xl border border-gray-200 bg-white px-3 py-2" placeholder="Tell us about your requirements..." rows={4} {...register("message")} />
+                <label htmlFor="message" className="text-xs">Message</label>
+                <textarea id="message" className="flex w-full rounded-xl border border-gray-200 bg-white px-3 py-2" placeholder="Tell us about your requirements..." rows={4} {...register("message")} />
               </div>
               <button type="submit" className="w-full bg-[linear-gradient(135deg,hsl(215_85%_45%),hsl(205_80%_60%))] text-white font-bold shadow-[0_2px_20px_-4px_hsl(215_85%_45%/0.12)] flex items-center justify-center gap-2 p-3 rounded-xl hover:scale-102 transition duration-300" aria-label="Send Message">
                 {loading ? <ClipLoader size={18} color="#ffffff" />: <><Send className="h-4 w-4" /> Send Message</>}

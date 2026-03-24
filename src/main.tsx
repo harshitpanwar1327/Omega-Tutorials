@@ -4,11 +4,14 @@ import './index.css'
 import App from './App.js'
 import { HashRouter as Router } from 'react-router-dom'
 import { ToastContainer, Bounce } from 'react-toastify'
+import { HelmetProvider } from 'react-helmet-async'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Router>
-      <App />
+    <HelmetProvider>
+      <Router>
+        <App />
+      </Router>
       <ToastContainer
         position="top-center"
         autoClose={1500}
@@ -22,6 +25,6 @@ createRoot(document.getElementById('root')!).render(
         theme="light"
         transition={Bounce}
       />
-    </Router>
+    </HelmetProvider>
   </StrictMode>,
 )
