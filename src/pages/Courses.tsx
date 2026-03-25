@@ -23,7 +23,7 @@ const courseData = [
     desc: "In-depth coaching for students preparing for boards and competitive exam foundations.",
     icon: FlaskConical,
     color: "from-[#17263F] to-[#0F5BD3]",
-    subjects: ["Mathematics", "Physics", "Chemistry", "Biology"],
+    subjects: ["Mathematics", "Physics", "Chemistry", "Biology", "Accountancy"],
   },
   {
     title: "IIT-JEE",
