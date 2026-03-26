@@ -106,8 +106,8 @@ const Contact = () => {
           viewport={{ once: true }}
         >
           <div className="self-center px-4 py-2 rounded-full text-xs font-semibold tracking-wider bg-white/10 text-white">CONTACT US</div>
-          <h1 className="text-4xl font-bold text-white">Contact Omega Tutorials – Best Coaching Institute in Gurugram</h1>
-          <p className="text-white/80">Looking for the best coaching institute in Gurugram? Contact Omega Tutorials today for expert guidance in Classes 9–12, IIT-JEE, and NEET preparation. Visit our centers in Sector 4 and Railway Road or call us for admission details.</p>
+          <h1 className="text-4xl font-bold text-white">Contact Omega Tutorials – Best Coaching Institute in Gurugram <span className='hidden'>(Gurgaon)</span></h1>
+          <p className="text-white/80">Looking for the best coaching institute in Gurugram <span className='hidden'>(Gurgaon)</span>? Contact Omega Tutorials today for expert guidance in Classes 9–12, IIT-JEE, and NEET preparation. Visit our centers in Sector 4 and Railway Road or call us for admission details.</p>
         </motion.div>
       </div>
 

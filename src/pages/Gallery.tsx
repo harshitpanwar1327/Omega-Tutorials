@@ -44,13 +44,13 @@ const Gallery = () => {
           viewport={{ once: true }}
         >
           <div className="self-center px-4 py-2 rounded-full text-xs font-semibold tracking-wider bg-white/10 text-white">GALLERY</div>
-          <h1 className="text-4xl font-bold text-white">Coaching Classes in Gurugram – Omega Tutorials Gallery & Classroom Photos</h1>
-          <p className="text-white/80">Explore our coaching institute in Gurugram through classroom photos, infrastructure, student activities, and results.</p>
+          <h1 className="text-4xl font-bold text-white">Coaching Classes in Gurugram <span className='hidden'>(Gurgaon)</span> – Omega Tutorials Gallery & Classroom Photos</h1>
+          <p className="text-white/80">Explore our coaching institute in Gurugram <span className='hidden'>(Gurgaon)</span> through classroom photos, infrastructure, student activities, and results.</p>
         </motion.div>
       </div>
 
       <div className="py-12 lg:py-24 px-4 lg:px-16 flex flex-col gap-12">
-        <h2 className="text-3xl font-bold text-center">Inside Our Coaching Institute in Gurugram</h2>
+        <h2 className="text-3xl font-bold text-center">Inside Our Coaching Institute in Gurugram <span className='hidden'>(Gurgaon)</span></h2>
         <div className="flex flex-wrap justify-center items-center gap-2">
           {categories.map((cat) => (
             <button key={cat} onClick={()=>setActive(cat)} className={`px-4 py-2 rounded-full text-sm font-medium transition duration-300 ${active === cat ? "bg-[linear-gradient(135deg,hsl(215_85%_45%),hsl(205_80%_60%))] text-white shadow-[0_2px_20px_-4px_hsl(215_85%_45%/0.12)]" : "bg-gray-200 hover:bg-blue-100"}`}>
@@ -99,8 +99,8 @@ const Gallery = () => {
       </AnimatePresence>
 
       <div className="hidden">
-        <h2>Best Coaching Institute in Gurugram Photos</h2>
-        <p>Browse Omega Tutorials gallery showcasing classroom sessions, infrastructure, student achievements, and events. Our coaching institute in Gurugram provides a structured and engaging learning environment.</p>
+        <h2>Best Coaching Institute in Gurugram <span className='hidden'>(Gurgaon)</span> Photos</h2>
+        <p>Browse Omega Tutorials gallery showcasing classroom sessions, infrastructure, student achievements, and events. Our coaching institute in Gurugram <span className='hidden'>(Gurgaon)</span> provides a structured and engaging learning environment.</p>
       </div>
     </>
   )

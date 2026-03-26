@@ -166,13 +166,13 @@ const Results = () => {
           viewport={{ once: true }}
         >
           <div className="self-center px-4 py-2 rounded-full text-xs font-semibold tracking-wider bg-white/10 text-white">RESULTS & TESTIMONIALS</div>
-          <h1 className="text-4xl font-bold text-white">Coaching Results in Gurugram – Omega Tutorials Success Stories & Toppers</h1>
-          <p className="text-white/80">Discover why Omega Tutorials is one of the best coaching institutes in Gurugram with top results, board exam toppers, and student success stories.</p>
+          <h1 className="text-4xl font-bold text-white">Coaching Results in Gurugram <span className='hidden'>(Gurgaon)</span> – Omega Tutorials Success Stories & Toppers</h1>
+          <p className="text-white/80">Discover why Omega Tutorials is one of the best coaching institutes in Gurugram <span className='hidden'>(Gurgaon)</span> with top results, board exam toppers, and student success stories.</p>
         </motion.div>
       </div>
 
       <div className="py-12 lg:py-24 px-4 lg:px-16 flex flex-col items-center gap-12 bg-[hsl(210_33%_98%)]">
-        <h2 className="text-3xl font-bold text-center">Our Coaching Results in Gurugram</h2>
+        <h2 className="text-3xl font-bold text-center">Our Coaching Results in Gurugram <span className='hidden'>(Gurgaon)</span></h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {stats.map((s, i) => (
             <motion.div key={i} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white rounded-xl p-6 shadow-[0_4px_24px_-6px_hsl(215_85%_45%/0.10)] flex flex-col items-center gap-4 text-center">
@@ -198,8 +198,8 @@ const Results = () => {
           className='flex flex-col items-center gap-4 mx-auto max-w-4xl'
         >
           <div className="px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase bg-[hsl(215_85%_45%)]/10 text-[hsl(215_85%_45%)]">Toppers</div>
-          <h2 className="text-3xl md:text-4xl font-bold text-[hsl(215_30%_15%)] text-center">Top Performers from Our Coaching Classes in Gurugram</h2>
-          <p className='text-gray-500 text-center'>Our students consistently achieve top results in board exams and competitive exams. These toppers from Omega Tutorials reflect our commitment to quality coaching in Gurugram.</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-[hsl(215_30%_15%)] text-center">Top Performers from Our Coaching Classes in Gurugram <span className='hidden'>(Gurgaon)</span></h2>
+          <p className='text-gray-500 text-center'>Our students consistently achieve top results in board exams and competitive exams. These toppers from Omega Tutorials reflect our commitment to quality coaching in Gurugram <span className='hidden'>(Gurgaon)</span>.</p>
         </motion.div>
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {toppers.map((t, i) => (
@@ -232,7 +232,7 @@ const Results = () => {
           className='flex flex-col items-center gap-4'
         >
           <div className="px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase bg-[hsl(215_85%_45%)]/10 text-[hsl(215_85%_45%)]">Testimonials</div>
-          <h2 className="text-3xl md:text-4xl font-bold text-[hsl(215_30%_15%)] text-center">Student Reviews of Our Coaching Institute in Gurugram</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-[hsl(215_30%_15%)] text-center">Student Reviews of Our Coaching Institute in Gurugram <span className='hidden'>(Gurgaon)</span></h2>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonials.map((t, i) => (
@@ -252,8 +252,8 @@ const Results = () => {
 
       {/* Hidden SEO  */}
       <div className="hidden">
-        <h2>Best Coaching Institute Results in Gurugram</h2>
-        <p>Omega Tutorials has consistently delivered top results in Gurugram with 90%+ scorers, board exam toppers, and successful IIT-JEE and NEET aspirants. Our structured coaching ensures academic excellence.</p>
+        <h2>Best Coaching Institute Results in Gurugram <span className='hidden'>(Gurgaon)</span></h2>
+        <p>Omega Tutorials has consistently delivered top results in Gurugram <span className='hidden'>(Gurgaon)</span> with 90%+ scorers, board exam toppers, and successful IIT-JEE and NEET aspirants. Our structured coaching ensures academic excellence.</p>
       </div>
     </>
   )
