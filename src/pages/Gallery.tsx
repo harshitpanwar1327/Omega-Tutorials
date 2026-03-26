@@ -4,7 +4,7 @@ import { useState } from "react"
 import * as Icons from '../assets/gallery'
 import { Helmet } from "react-helmet-async"
 
-const categories = ["All", "Classroom", "Infrastructure", "Results", "Events"];
+const categories = ["All", "Classroom", "Infrastructure", "Events"];
 
 const galleryItems = [
   { src: Icons.Classroom1, title: "Concept-Based Teaching in Action", cat: "Classroom" },
@@ -15,7 +15,6 @@ const galleryItems = [
   { src: Icons.Infrastructure2, title: "Comfortable Learning Spaces", cat: "Infrastructure" },
   { src: Icons.Infrastructure3, title: "Well-Equipped Study Rooms", cat: "Infrastructure" },
   { src: Icons.Infrastructure4, title: "Reception", cat: "Infrastructure" },
-  { src: Icons.Results1, title: "Our Star Performers", cat: "Results" },
   { src: Icons.Events1, title: "Cyber Security Awareness", cat: "Events" },
   { src: Icons.Events2, title: "Student Engagement Activities", cat: "Events" },
 ];

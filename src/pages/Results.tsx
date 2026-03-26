@@ -112,7 +112,7 @@ const toppers = [
   },
   {
     name: "Vansh Lakhani",
-    class: "Class 12",
+    class: "Class 10",
     subjects: [
       { name: "Mathematics", marks: "99/100" },
     ],
