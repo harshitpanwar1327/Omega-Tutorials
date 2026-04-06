@@ -64,8 +64,26 @@ const Courses = () => {
   return (
     <>
       <Helmet>
-        <title>Coaching Classes in Gurugram | IIT JEE & NEET Coaching - Omega Tutorials</title>
-        <meta name="description" content="Best coaching classes in Gurugram for Classes 9–12, IIT-JEE & NEET. Experienced teachers, small batches, and proven results." />
+        <title>IIT JEE & NEET Coaching in Gurugram | Classes 9–12 Tuition</title>
+        <meta name="description" content="Join Omega Tutorials for IIT JEE & NEET coaching in Gurugram (Gurgaon). Coaching classes for 9–12 with expert teachers, small batches & proven results." />
+        <meta name="keywords" content="IIT JEE coaching gurugram, NEET coaching gurgaon, class 9 10 tuition gurugram, class 11 12 coaching gurgaon, best coaching classes gurugram" />
+        <link rel="canonical" href="https://omegatutorials.in/courses" />
+        <meta property="og:title" content="IIT JEE & NEET Coaching in Gurugram" />
+        <meta property="og:description" content="Best coaching classes for IIT-JEE, NEET and Classes 9–12 in Gurugram." />
+        <meta property="og:url" content="https://omegatutorials.in/courses" />
+        <meta property="og:type" content="website" />
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "Course",
+            "name": "IIT JEE & NEET Coaching in Gurugram",
+            "provider": {
+              "@type": "EducationalOrganization",
+              "name": "Omega Tutorials",
+              "sameAs": "https://omegatutorials.in"
+            }
+          }`}
+        </script>
       </Helmet>
 
       <div className="mt-15 px-4 py-30 bg-[linear-gradient(135deg,hsl(215_50%_18%),hsl(215_85%_45%))]">

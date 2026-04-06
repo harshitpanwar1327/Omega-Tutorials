@@ -38,7 +38,30 @@ const Hero = () => {
     <>
       <Helmet>
         <title>Best Coaching Classes in Gurugram | Omega Tutorials</title>
-        <meta name="description" content="Top coaching institute in Gurugram for Maths, Science, IIT-JEE & NEET. Experienced teachers and proven results." />
+        <meta name="description" content="Top coaching institute in Gurugram for Maths, Science, IIT-JEE & NEET. Experienced teachers, small batches & proven results." />
+        <meta name="keywords" content="coaching classes in gurugram, best coaching institute gurgaon, IIT JEE coaching gurugram, NEET coaching gurgaon, maths tuition gurgaon" />
+        <link rel="canonical" href="https://omegatutorials.in/" />
+        <meta property="og:title" content="Best Coaching Classes in Gurugram | Omega Tutorials" />
+        <meta property="og:description" content="Top coaching institute in Gurugram for IIT-JEE, NEET & school academics." />
+        <meta property="og:url" content="https://omegatutorials.in/" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Omega Tutorials Gurugram" />
+        <meta name="twitter:description" content="Best coaching institute for IIT-JEE & NEET." />
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            "name": "Omega Tutorials",
+            "url": "https://omegatutorials.in",
+            "logo": "https://omegatutorials.in/favicon.png",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Gurugram",
+              "addressCountry": "IN"
+            }
+          }`}
+        </script>
       </Helmet>
 
       <div className="mt-15 relative min-h-[95vh] flex items-center">
@@ -159,7 +182,7 @@ const Hero = () => {
       <div className="py-12 lg:py-24 px-4 lg:px-16 bg-[linear-gradient(135deg,hsl(215_85%_45%),hsl(205_80%_60%))]">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className='flex flex-col items-center gap-4'>
           <h2 className="text-3xl md:text-4xl font-bold text-[hsl(0_0%_100%)] text-center">Ready to Excel Academically?</h2>
-          <p className="text-[hsl(0_0%_100%)]/80 max-w-xl mx-auto text-center">oin hundreds of successful students at Omega Tutorials. Limited seats available for the new academic session.</p>
+          <p className="text-[hsl(0_0%_100%)]/80 max-w-xl mx-auto text-center">Join hundreds of successful students at Omega Tutorials. Limited seats available for the new academic session.</p>
           <div className="flex items-center gap-4 mt-4">
             <NavLink to={'/contact'} className="flex items-center gap-2 bg-[linear-gradient(135deg,hsl(45_93%_55%),hsl(35_95%_55%))] text-white font-semibold px-8 py-3 rounded-lg shadow-[0_12px_40px_-10px_hsl(215_85%_45%/0.18)] hover:scale-105 transition duration-300">
               Enroll Now <ArrowRight className="h-5 w-5" />
@@ -169,12 +192,6 @@ const Hero = () => {
             </NavLink>
           </div>
         </motion.div>
-      </div>
-
-      {/* Hidden SEO */}
-      <div className="hidden">
-        <h2>Best Coaching Classes in Gurugram <span className='hidden'>(Gurgaon)</span></h2>
-        <p>Omega Tutorials is one of the best coaching institutes in Gurugram <span className='hidden'>(Gurgaon)</span> offering expert guidance for Maths, Science, IIT-JEE, and NEET preparation. Our experienced faculty, small batch sizes, and personalized attention help students achieve excellent academic results.</p>
       </div>
     </>
   )

@@ -151,7 +151,39 @@ const Results = () => {
     <>
       <Helmet>
         <title>Results & Toppers | Best Coaching Institute in Gurugram - Omega Tutorials</title>
-        <meta name="description" content="See results of Omega Tutorials - top coaching institute in Gurugram. 90%+ scorers, board toppers, and real student success stories." />
+        <meta name="description" content="Explore Omega Tutorials results in Gurugram with 90%+ scorers, board toppers, and real student success stories. Trusted coaching for Classes 9–12, IIT-JEE & NEET." />
+        <meta name="keywords" content="Omega Tutorials results, coaching results Gurugram, IIT JEE toppers Gurgaon, NEET coaching results Gurgaon, best coaching institute Gurugram results" />
+        <link rel="canonical" href="https://omegatutorials.in/results" />
+        <meta property="og:title" content="Omega Tutorials Results & Toppers" />
+        <meta property="og:description" content="See real student success stories, toppers, and 90%+ results from Omega Tutorials in Gurugram." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://omegatutorials.in/results" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Omega Tutorials Results & Toppers" />
+        <meta name="twitter:description" content="Top coaching institute in Gurugram with proven results and student success stories." />
+        <meta name="geo.region" content="IN-HR" />
+        <meta name="geo.placename" content="Gurugram" />
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            "name": "Omega Tutorials",
+            "url": "https://omegatutorials.in",
+            "logo": "https://omegatutorials.in/favicon.png",
+            "description": "Omega Tutorials is a leading coaching institute in Gurugram offering Classes 9–12, IIT-JEE, and NEET coaching with proven results.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Gurugram",
+              "addressRegion": "Haryana",
+              "addressCountry": "India"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "150"
+            }
+          }`}
+        </script>
       </Helmet>
 
       <div className="mt-15 px-4 py-30 bg-[linear-gradient(135deg,hsl(215_50%_18%),hsl(215_85%_45%))]">
@@ -248,12 +280,6 @@ const Results = () => {
             </motion.div>
           ))}
         </div>
-      </div>
-
-      {/* Hidden SEO  */}
-      <div className="hidden">
-        <h2>Best Coaching Institute Results in Gurugram <span className='hidden'>(Gurgaon)</span></h2>
-        <p>Omega Tutorials has consistently delivered top results in Gurugram <span className='hidden'>(Gurgaon)</span> with 90%+ scorers, board exam toppers, and successful IIT-JEE and NEET aspirants. Our structured coaching ensures academic excellence.</p>
       </div>
     </>
   )

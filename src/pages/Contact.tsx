@@ -84,14 +84,37 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Omega Tutorials | Best Coaching Institute in Gurugram</title>
-        <meta  name="description" content="Contact Omega Tutorials in Gurugram for Class 9–12, IIT-JEE & NEET coaching. Call, visit our centers, or send enquiry online." />
-        <meta name="keywords" content="Omega Tutorials contact, coaching institute Gurugram contact, tuition near me, IIT JEE coaching Gurgaon contact, NEET coaching Gurgaon" />
+        <title>Contact Omega Tutorials | Coaching Classes in Gurugram</title>
+        <meta name="description" content="Contact Omega Tutorials in Gurugram (Gurgaon) for admissions in Classes 9–12, IIT-JEE & NEET coaching. Call, visit our centers or send enquiry online." />
+        <meta name="keywords" content="coaching classes near me, tuition near me gurugram, omega tutorials contact, IIT JEE coaching gurgaon contact, NEET coaching gurgaon contact" />
+        <link rel="canonical" href="https://omegatutorials.in/contact" />
         <meta property="og:title" content="Contact Omega Tutorials Gurugram" />
-        <meta property="og:description" content="Get in touch with Omega Tutorials for admissions, fees, and course details." />
+        <meta property="og:description" content="Get in touch for admissions, fees & course details." />
+        <meta property="og:url" content="https://omegatutorials.in/contact" />
         <meta property="og:type" content="website" />
         <meta name="geo.region" content="IN-HR" />
         <meta name="geo.placename" content="Gurugram" />
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            "name": "Omega Tutorials",
+            "url": "https://omegatutorials.in/contact",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+91-9868495901",
+              "contactType": "customer service",
+              "areaServed": "IN"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Gurugram",
+              "addressRegion": "Haryana",
+              "postalCode": "122001",
+              "addressCountry": "IN"
+            }
+          }`}
+        </script>
       </Helmet>
 
       <div className="mt-15 px-4 py-30 bg-[linear-gradient(135deg,hsl(215_50%_18%),hsl(215_85%_45%))]">

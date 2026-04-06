@@ -32,8 +32,27 @@ const AboutUs = () => {
   return (
     <>
       <Helmet>
-        <title>About Omega Tutorials | Best Coaching Institute in Gurugram</title>
-        <meta name="description" content="Learn about Omega Tutorials, a top coaching institute in Gurugram offering Maths, Science, IIT-JEE & NEET coaching with experienced faculty and proven results." />
+        <title>About Omega Tutorials | Coaching Institute in Gurugram</title>
+        <meta name="description" content="Learn about Omega Tutorials, a trusted coaching institute in Gurugram with 29+ years of experience in teaching Maths, Science, IIT-JEE & NEET students." />
+        <meta name="keywords" content="about omega tutorials, coaching institute in gurugram, best tuition gurgaon, experienced teachers gurugram, IIT JEE coaching institute gurgaon" />
+        <link rel="canonical" href="https://omegatutorials.in/about-us" />
+        <meta property="og:title" content="About Omega Tutorials Gurugram" />
+        <meta property="og:description" content="Trusted coaching institute in Gurugram with 29+ years of teaching excellence." />
+        <meta property="og:url" content="https://omegatutorials.in/about-us" />
+        <meta property="og:type" content="website" />
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            "name": "Omega Tutorials",
+            "url": "https://omegatutorials.in/about-us",
+            "description": "Coaching institute in Gurugram offering IIT-JEE, NEET and school coaching.",
+            "founder": {
+              "@type": "Person",
+              "name": "Yogesh Kumar"
+            }
+          }`}
+        </script>
       </Helmet>
 
       <div className="mt-15 px-4 py-30 bg-[linear-gradient(135deg,hsl(215_50%_18%),hsl(215_85%_45%))]">
@@ -169,12 +188,6 @@ const AboutUs = () => {
             </motion.div>
           ))}
         </div>
-      </div>
-
-      {/* Hidden SEO */}
-      <div className="hidden">
-        <h2>Best Coaching Institute in Gurugram <span className='hidden'>(Gurgaon)</span></h2>
-        <p>Omega Tutorials is a top-rated coaching institute in Gurugram <span className='hidden'>(Gurgaon)</span> offering Maths, Science, IIT-JEE, and NEET coaching. Known for experienced faculty, small batches, and excellent results, we are a preferred choice for students.</p>
       </div>
     </>
   )

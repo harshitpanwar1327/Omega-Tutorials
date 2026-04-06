@@ -28,8 +28,14 @@ const Gallery = () => {
   return (
     <>
       <Helmet>
-        <title>Gallery | Coaching Classes in Gurugram - Omega Tutorials</title>
-        <meta name="description" content="View photos of Omega Tutorials coaching institute in Gurugram including classrooms, infrastructure, student activities, and results." />
+        <title>Omega Tutorials Gallery | Coaching Classes in Gurugram</title>
+        <meta name="description" content="Explore Omega Tutorials gallery – classroom photos, infrastructure, student activities and learning environment in Gurugram (Gurgaon)." />
+        <meta name="keywords" content="coaching classes photos gurugram, classroom images gurgaon, omega tutorials gallery, tuition center photos gurugram" />
+        <link rel="canonical" href="https://omegatutorials.in/gallery" />
+        <meta property="og:title" content="Omega Tutorials Gallery Gurugram" />
+        <meta property="og:description" content="See classrooms, infrastructure and student activities." />
+        <meta property="og:url" content="https://omegatutorials.in/gallery" />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       <div className="mt-15 px-4 py-30 bg-[linear-gradient(135deg,hsl(215_50%_18%),hsl(215_85%_45%))]">
