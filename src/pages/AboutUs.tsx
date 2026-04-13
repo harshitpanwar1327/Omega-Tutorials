@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Award, BookOpen, Eye, ShieldCheck, Target, Users } from 'lucide-react'
 import { Helmet } from "react-helmet-async"
+import Founder from '../assets/Founder.jpg'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -126,15 +127,18 @@ const AboutUs = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex flex-col gap-6 bg-white rounded-xl p-8 md:p-12 shadow-[0_4px_24px_-6px_hsl(215_85%_45%/0.10)] border-l-4 border-[hsl(215_85%_45%)] hover:scale-102 transition duration-300 max-w-5xl text-[hsl(215_30%_15%)]/80 leading-relaxed italic text-lg"
+          className="flex flex-col-reverse lg:flex-row lg:items-center gap-6 bg-white rounded-xl p-8 md:p-12 shadow-[0_4px_24px_-6px_hsl(215_85%_45%/0.10)] border-l-4 border-[hsl(215_85%_45%)] hover:scale-102 transition duration-300 text-[hsl(215_30%_15%)]/80 leading-relaxed italic text-lg"
         >
-          <p>"As stated by Swami Vivekananda, "Get up and set your shoulder to the wheel... what is this life for?... Leave some mark behind. Otherwise what is the difference between you and the stones? Yes, at OMEGA we wake up, become aware, become sensitive and touch lives around us.</p>
-          <p>Omega came into existence back in 2004 with an aim to impart quality education to the students. From there onwards there has been no looking back for us as we thrive to attain excellence through our sheer determination and perseverance. I would like to express my heartfelt gratitude to all the students and parents for their immense support and cooperation throughout this journey which has helped us to carve a niche in the coaching world in Gurugram <span className='hidden'>(Gurgaon)</span>.</p>
-          <p>Last but not the least I hope to lay down a foundation of an exemplary learning community here at Omega."</p>
-          <div>
-            <p className="font-heading font-bold text-lg">Yogesh Kumar</p>
-            <p className="text-gray-500 text-sm">Proprietor - Omega Tutorials</p>
+          <div className='flex flex-col gap-6'>
+            <p>"As stated by Swami Vivekananda, "Get up and set your shoulder to the wheel... what is this life for?... Leave some mark behind. Otherwise what is the difference between you and the stones? Yes, at OMEGA we wake up, become aware, become sensitive and touch lives around us.</p>
+            <p>Omega came into existence back in 2004 with an aim to impart quality education to the students. From there onwards there has been no looking back for us as we thrive to attain excellence through our sheer determination and perseverance. I would like to express my heartfelt gratitude to all the students and parents for their immense support and cooperation throughout this journey which has helped us to carve a niche in the coaching world in Gurugram <span className='hidden'>(Gurgaon)</span>.</p>
+            <p>Last but not the least I hope to lay down a foundation of an exemplary learning community here at Omega."</p>
+            <div>
+              <p className="font-heading font-bold text-lg">Yogesh Kumar</p>
+              <p className="text-gray-500 text-sm">Founder - Omega Tutorials</p>
+            </div>
           </div>
+          <img src={Founder} alt="Omega Tutorial's Founder" className='w-full lg:w-1/2 rounded-2xl' />
         </motion.div>
       </div>
 
