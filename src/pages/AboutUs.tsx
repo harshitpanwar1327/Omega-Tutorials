@@ -22,12 +22,8 @@ const methodology = [
 ];
 
 const teachers = [
-  { name: "Dr. Rajesh Kumar", qualification: "Ph.D. Mathematics, M.Sc.", course: "Mathematics (Class 11-12)", photo: Icons.Yatika },
-  { name: "Mrs. Priya Sharma", qualification: "M.Sc. Physics, B.Ed.", course: "Physics (Class 11-12)", photo: Icons.Yatika },
-  { name: "Mr. Amit Verma", qualification: "M.Sc. Chemistry, B.Ed.", course: "Chemistry (Class 11-12)", photo: Icons.Yatika },
-  { name: "Mrs. Sunita Gupta", qualification: "M.A. English, B.Ed.", course: "English (Class 6-10)", photo: Icons.Avni },
-  { name: "Mr. Rohit Singh", qualification: "M.Sc. Biology, B.Ed.", course: "Biology (Class 11-12)", photo: Icons.Avni },
-  { name: "Mrs. Neha Agarwal", qualification: "M.Sc. Mathematics, B.Ed.", course: "Mathematics (Class 6-10)", photo: Icons.Avni },
+  { name: "Mr. Yogesh Kumar", qualification: "M.Sc. Mathematics, B.Ed.", course: "Mathematics (Class 9-12)", photo: Icons.Yatika },
+  { name: "Mr. Deepak Vashishth", qualification: "M.Sc. Physics, B.Ed.", course: "Physics (Class 11-12)", photo: Icons.Yatika }
 ];
 
 const trustReasons = [
@@ -193,19 +189,17 @@ const AboutUs = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-[hsl(215_30%_15%)] text-center">Meet Our Expert Faculty <span className='hidden'>(Gurgaon)</span></h2>
           <p className='text-gray-500 text-center'>Our team of experienced and qualified teachers is dedicated to providing the best education and guidance to students <span className='hidden'>(Gurgaon)</span>.</p>
         </motion.div>
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto max-w-6xl">
           {teachers.map((t, i) => (
             <motion.div key={i} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white rounded-xl p-6 shadow-[0_4px_24px_-6px_hsl(215_85%_45%/0.10)] flex flex-col items-center gap-4">
               <img src={t.photo} alt={`${t.name} teacher from Omega Tutorials coaching in Gurugram`} className="w-24 h-32 rounded-full object-cover border-4 border-[#1162D4]/20" />
-              <div className="flex flex-col gap-2 text-center items-center">
-                <p className="font-semibold text-[hsl(215_30%_15%)]">{t.name}</p>
+              <div className="flex flex-col gap-2 items-center">
+                <h3 className="font-semibold text-black">{t.name}</h3>
                 <div className="flex items-center gap-2 text-sm text-gray-500">
                   <GraduationCap className="h-4 w-4" />
                   <span>{t.qualification}</span>
                 </div>
-                <div className="px-4 py-1.5 rounded-full text-sm font-medium bg-[#1162D4]/10 text-[#1162D4]">
-                  {t.course}
-                </div>
+                <div className="px-5 py-2 rounded-full text-xs font-medium bg-[#1162D4]/10 text-[#1162D4]">{t.course}</div>
               </div>
             </motion.div>
           ))}
