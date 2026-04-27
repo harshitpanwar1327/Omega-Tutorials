@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
-import { Award, BookOpen, Eye, ShieldCheck, Target, Users, GraduationCap } from 'lucide-react'
+import { Award, BookOpen, Eye, ShieldCheck, Target, Users } from 'lucide-react'
 import { Helmet } from "react-helmet-async"
 import Founder from '../assets/Founder.jpg'
-import * as Icons from '../assets/teachers'
+// import * as Icons from '../assets/teachers'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -21,10 +21,10 @@ const methodology = [
   { icon: Award, title: "Performance Reports", desc: "Detailed reports shared with parents to keep them involved." },
 ];
 
-const teachers = [
-  { name: "Mr. Yogesh Kumar", qualification: "M.Sc. Mathematics, B.Ed.", course: "Mathematics (Class 9-12)", photo: Icons.Yatika },
-  { name: "Mr. Deepak Vashishth", qualification: "M.Sc. Physics, B.Ed.", course: "Physics (Class 11-12)", photo: Icons.Yatika }
-];
+// const teachers = [
+//   { name: "Mr. Yogesh Kumar", qualification: "M.Sc. Mathematics, B.Ed.", course: "Mathematics (Class 9-12)", photo: Icons.Yatika },
+//   { name: "Mr. Deepak Vashishth", qualification: "M.Sc. Physics, B.Ed.", course: "Physics (Class 11-12)", photo: Icons.Yatika }
+// ];
 
 const trustReasons = [
   "Transparent communication with parents",
@@ -177,7 +177,7 @@ const AboutUs = () => {
       </div>
 
       {/* Our Faculty */}
-      <div className='py-12 lg:py-24 px-4 lg:px-16 flex flex-col items-center gap-12 bg-[hsl(210_33%_98%)]'>
+      {/* <div className='py-12 lg:py-24 px-4 lg:px-16 flex flex-col items-center gap-12 bg-[hsl(210_33%_98%)]'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -204,10 +204,10 @@ const AboutUs = () => {
             </motion.div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Trust */}
-      <div className='py-12 lg:py-24 px-4 lg:px-16 flex flex-col items-center gap-12'>
+      <div className='py-12 lg:py-24 px-4 lg:px-16 flex flex-col items-center gap-12 bg-[hsl(210_33%_98%)]'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
