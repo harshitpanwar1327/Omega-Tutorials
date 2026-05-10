@@ -42,7 +42,7 @@ type ContactForm = {
   name: string;
   phone: string;
   school: string;
-  class: string;
+  interestedProgram: string;
   message: string;
 };
 
@@ -66,7 +66,7 @@ const Contact = () => {
           name: data.name,
           phone: data.phone,
           school: data.school,
-          class: data.class,
+          class: data.interestedProgram,
           message: data.message
         },
         import.meta.env.VITE_PUBLIC_KEY
@@ -191,15 +191,15 @@ const Contact = () => {
                 />
               </div>
               <div className="flex flex-col gap-1">
-                <label htmlFor="class" className="text-xs">Class</label>
+                <label htmlFor="class" className="text-xs">Interested Program</label>
                 <select id="class" className="flex w-full rounded-xl border border-gray-200 bg-white py-2 px-3" required
-                  {...register("class")}
+                  {...register("interestedProgram")}
                 >
-                  <option value="">Select Class</option>
-                  <option value="Class 9th">Class 9th</option>
-                  <option value="Class 10th">Class 10th</option>
-                  <option value="Class 11th">Class 11th</option>
-                  <option value="Class 12th">Class 12th</option>
+                  <option value="">Select Program</option>
+                  <option value="Boards (9-10)">Boards (9-10)</option>
+                  <option value="Senior Secondary (11-12)">Senior Secondary (11-12)</option>
+                  <option value="Jee Preparation">Jee Preparation</option>
+                  <option value="Neet Preparation">Neet Preparation</option>
                 </select>
               </div>
               <div className="md:col-span-2 flex flex-col gap-1">
