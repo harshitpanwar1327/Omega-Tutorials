@@ -1,10 +1,10 @@
-import { MessageCircle, Instagram, Facebook, Youtube } from "lucide-react";
+import { Facebook, Instagram, WhatsApp, YouTube } from "@mui/icons-material";
 
 const socials = [
   {
     label: "WhatsApp",
     href: "https://wa.me/919868495901?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20Omega%20Tutorials.",
-    icon: MessageCircle,
+    icon: WhatsApp,
     bg: "bg-[hsl(142,70%,45%)]",
   },
   {
@@ -22,7 +22,7 @@ const socials = [
   {
     label: "YouTube",
     href: "https://www.youtube.com/@omegatutorials8326",
-    icon: Youtube,
+    icon: YouTube,
     bg: "bg-[hsl(0,70%,50%)]",
   },
 ];

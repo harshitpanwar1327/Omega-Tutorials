@@ -68,15 +68,15 @@ const Footer = () => {
               <MapPin size={18} className="shrink-0" /> <span className="wrap-break-word">Omega Tutorials - Sector 4</span>
             </a>
 
-            <a href="https://maps.app.goo.gl/2wRFWpjZBsa8BfhU8" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:text-white transition">
+            <a href="https://maps.app.goo.gl/2wRFWpjZBsa8BfhU8" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:text-white transition duration-300">
               <MapPin size={18} className="shrink-0" /> <span className="wrap-break-word">Omega Tutorials - Railway Road</span>
             </a>
 
-            <a href="tel:+919868495901" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:text-white transition">
+            <a href="tel:+919868495901" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:text-white transition duration-300">
               <Phone size={18} className="shrink-0" /> <span>+91 9868495901</span>
             </a>
 
-            <a href="mailto:omegatutorials2@gmail.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:text-white transition break-all">
+            <a href="mailto:omegatutorials2@gmail.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:text-white transition duration-300 break-all">
               <Mail size={18} className="shrink-0" /><span className="wrap-break-word">omegatutorials2@gmail.com</span>
             </a>
           </div>
