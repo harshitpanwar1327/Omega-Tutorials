@@ -74,7 +74,7 @@ const Gallery = () => {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
               >
-                <img src={item.src} alt={`${item.title} at Omega Tutorials coaching institute in Gurugram`} className="w-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+                <img src={item.src} alt={`${item.title} at Omega Tutorials coaching institute in Gurugram`} loading="lazy" className="w-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-linear-to-t from-[hsl(215_30%_15%)]/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-5">
                   <p className="text-white font-semibold">{item.title}</p>
                   <p className="text-white/70 text-xs">{item.cat}</p>
@@ -103,11 +103,6 @@ const Gallery = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
-      <div className="hidden">
-        <h2>Best Coaching Institute in Gurugram <span className='hidden'>(Gurgaon)</span> Photos</h2>
-        <p>Browse Omega Tutorials gallery showcasing classroom sessions, infrastructure, student achievements, and events. Our coaching institute in Gurugram <span className='hidden'>(Gurgaon)</span> provides a structured and engaging learning environment.</p>
-      </div>
     </>
   )
 }

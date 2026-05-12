@@ -204,7 +204,12 @@ const Contact = () => {
               </div>
               <div className="md:col-span-2 flex flex-col gap-1">
                 <label htmlFor="message" className="text-xs">Message</label>
-                <textarea id="message" className="flex w-full rounded-xl border border-gray-200 bg-white px-3 py-2" placeholder="Tell us about your requirements..." rows={4} {...register("message")} />
+                <textarea id="message" rows={4} className="flex w-full rounded-xl border border-gray-200 bg-white px-3 py-2" placeholder="Tell us about your requirements..."
+                  {...register("message", {
+                    required: "Message is required",
+                  })}
+                />
+                {errors.message && (<p className="text-xs text-red-500">{errors.message.message}</p>)}
               </div>
               <button type="submit" className="md:col-span-2 w-full bg-[linear-gradient(135deg,hsl(215_85%_45%),hsl(205_80%_60%))] text-white font-bold shadow-[0_2px_20px_-4px_hsl(215_85%_45%/0.12)] flex items-center justify-center gap-2 p-3 rounded-xl hover:scale-102 transition duration-300" aria-label="Send Message">
                 {loading ? <ClipLoader size={18} color="#ffffff" />: <><Send className="h-4 w-4" /> Send Message</>}

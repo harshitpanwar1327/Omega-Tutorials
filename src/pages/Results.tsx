@@ -9,9 +9,9 @@ const fadeUp = {
 };
 
 const stats = [
-  { icon: Trophy, value: "500+", label: "Students Scored 90%+" },
+  { icon: Trophy, value: "5000+", label: "Students Scored 90%+" },
   { icon: TrendingUp, value: "100%", label: "Average Pass Rate" },
-  { icon: Award, value: "50+", label: "Board Exam Toppers" },
+  { icon: Award, value: "500+", label: "Board Exam Toppers" },
   { icon: Star, value: "29+", label: "Years of Excellence" },
 ];
 

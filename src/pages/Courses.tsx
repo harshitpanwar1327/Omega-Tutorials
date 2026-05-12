@@ -168,11 +168,6 @@ const Courses = () => {
           </NavLink>
         </motion.div>
       </div>
-
-      <div className="hidden">
-        <h2>Best Coaching Classes in Gurugram <span className='hidden'>(Gurgaon)</span></h2>
-        <p>Omega Tutorials provides top coaching classes in Gurugram <span className='hidden'>(Gurgaon)</span> for students of Classes 9–12 along with IIT-JEE and NEET preparation. Our experienced teachers and structured programs help students achieve excellent results.</p>
-      </div>
     </>
   )
 }
