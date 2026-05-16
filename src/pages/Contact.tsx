@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Send, CheckCircle } from "lucide-react";
 import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
-import ClipLoader from "react-spinners/ClipLoader";
+import { ClipLoader } from "react-spinners";
 import emailjs from "@emailjs/browser";
 import { signInWithPopup } from "firebase/auth";
 import { auth, googleProvider } from "../firebase/Firebase";
