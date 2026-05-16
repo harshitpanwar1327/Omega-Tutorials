@@ -23,7 +23,7 @@ const toppers = [
       { name: "Mathematics", marks: "100/100" },
       { name: "Science", marks: "97/100" },
     ],
-    photo: Icons.Yatika,
+    photo: Icons.Annika,
   },
   {
     name: "Ananya Sahu",
@@ -32,7 +32,7 @@ const toppers = [
       { name: "Mathematics", marks: "100/100" },
       { name: "Science", marks: "96/100" },
     ],
-    photo: Icons.Yatika,
+    photo: Icons.Ananya,
   },
   {
     name: "Saanvi Marhatta",
@@ -41,7 +41,7 @@ const toppers = [
       { name: "Mathematics", marks: "100/100" },
       { name: "Science", marks: "96/100" },
     ],
-    photo: Icons.Yatika,
+    photo: Icons.Saanvi,
   },
   {
     name: "Meenal Nangia",
@@ -50,7 +50,7 @@ const toppers = [
       { name: "Mathematics", marks: "100/100" },
       { name: "Science", marks: "95/100" },
     ],
-    photo: Icons.Yatika,
+    photo: Icons.Meenal,
   },
   {
     name: "Bhawana Yadav",
@@ -59,7 +59,7 @@ const toppers = [
       { name: "Mathematics", marks: "100/100" },
       { name: "Science", marks: "95/100" },
     ],
-    photo: Icons.Yatika,
+    photo: Icons.Bhawana,
   },
   {
     name: "Tanish Shekhawat",
@@ -67,7 +67,7 @@ const toppers = [
     subjects: [
       { name: "Mathematics", marks: "100/100" },
     ],
-    photo: Icons.Yatika,
+    photo: Icons.Tanish,
   },
   {
     name: "Navya Malik",
@@ -76,7 +76,7 @@ const toppers = [
       { name: "Mathematics", marks: "99/100" },
       { name: "Science", marks: "96/100" },
     ],
-    photo: Icons.Yatika,
+    photo: Icons.Navya,
   },
   {
     name: "Srishti Gupta",
@@ -84,7 +84,7 @@ const toppers = [
     subjects: [
       { name: "Mathematics", marks: "99/100" },
     ],
-    photo: Icons.Yatika,
+    photo: Icons.Srishti,
   },
   {
     name: "Rohan Sharma",
@@ -93,7 +93,7 @@ const toppers = [
       { name: "Mathematics", marks: "98/100" },
       { name: "Science", marks: "95/100" },
     ],
-    photo: Icons.Yatika,
+    photo: Icons.Rohan,
   },
   {
     name: "Tia Takshak",
@@ -102,7 +102,7 @@ const toppers = [
       { name: "Mathematics", marks: "98/100" },
       { name: "Science", marks: "93/100" },
     ],
-    photo: Icons.Yatika,
+    photo: Icons.Tia,
   },
   {
     name: "Atharv Nassa",
@@ -110,7 +110,7 @@ const toppers = [
     subjects: [
       { name: "Mathematics", marks: "98/100" },
     ],
-    photo: Icons.Yatika,
+    photo: Icons.Atharv,
   },
   {
     name: "Arshia Kataria",
@@ -119,23 +119,23 @@ const toppers = [
       { name: "Mathematics", marks: "98/100" },
       { name: "Science", marks: "93/100" },
     ],
-    photo: Icons.Yatika,
+    photo: Icons.Arshia,
   },
-  {
-    name: "Aryan",
-    class: "Class 10",
-    subjects: [
-      { name: "Mathematics", marks: "98/100" },
-    ],
-    photo: Icons.Yatika,
-  },
+  // {
+  //   name: "Aryan",
+  //   class: "Class 10",
+  //   subjects: [
+  //     { name: "Mathematics", marks: "98/100" },
+  //   ],
+  //   photo: Icons.Yatika,
+  // },
   {
     name: "Devansh Sharma",
     class: "Class 10",
     subjects: [
       { name: "Mathematics", marks: "98/100" },
     ],
-    photo: Icons.Yatika,
+    photo: Icons.Devansh,
   },
   {
     name: "Anirudh Singh",
@@ -143,7 +143,7 @@ const toppers = [
     subjects: [
       { name: "Mathematics", marks: "98/100" },
     ],
-    photo: Icons.Yatika,
+    photo: Icons.Anirudh,
   },
   {
     name: "Ishant Malik",
@@ -151,343 +151,146 @@ const toppers = [
     subjects: [
       { name: "Mathematics", marks: "98/100" },
     ],
-    photo: Icons.Yatika,
+    photo: Icons.Ishant,
   },
-  {
-    name: "Priyadarshani Jha",
-    class: "Class 10",
-    subjects: [
-      { name: "Mathematics", marks: "98/100" },
-    ],
-    photo: Icons.Yatika,
-  },
+  // {
+  //   name: "Priyadarshani Jha",
+  //   class: "Class 10",
+  //   subjects: [
+  //     { name: "Mathematics", marks: "98/100" },
+  //   ],
+  //   photo: Icons.Yatika,
+  // },
   {
     name: "Mahika Chawla",
     class: "Class 10",
     subjects: [
       { name: "Mathematics", marks: "98/100" },
     ],
-    photo: Icons.Yatika,
+    photo: Icons.Mahika,
   },
-  {
-    name: "Harsh Kumar",
-    class: "Class 10",
-    subjects: [
-      { name: "Mathematics", marks: "98/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Gauransh Khatter",
-    class: "Class 10",
-    subjects: [
-      { name: "Mathematics", marks: "97/100" },
-      { name: "Science", marks: "97/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Shaurya Agrawal",
-    class: "Class 10",
-    subjects: [
-      { name: "Science", marks: "97/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Naivedhya Singh",
-    class: "Class 10",
-    subjects: [
-      { name: "Mathematics", marks: "97/100" },
-      { name: "Science", marks: "96/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Khushi Aggarwal",
-    class: "Class 10",
-    subjects: [
-      { name: "Mathematics", marks: "97/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Kartik",
-    class: "Class 10",
-    subjects: [
-      { name: "Mathematics", marks: "97/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Tejas Singh",
-    class: "Class 10",
-    subjects: [
-      { name: "Mathematics", marks: "97/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Gauri Gokul",
-    class: "Class 10",
-    subjects: [
-      { name: "Mathematics", marks: "97/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Moksh Yadav",
-    class: "Class 10",
-    subjects: [
-      { name: "Mathematics", marks: "97/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Jigyasa Kumari",
-    class: "Class 10",
-    subjects: [
-      { name: "Mathematics", marks: "97/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Divyanshi Jain",
-    class: "Class 10",
-    subjects: [
-      { name: "Mathematics", marks: "96/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Yatharth Popli",
-    class: "Class 10",
-    subjects: [
-      { name: "Mathematics", marks: "96/100" },
-      { name: "Science", marks: "94/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Palak Bhansali",
-    class: "Class 10",
-    subjects: [
-      { name: "Mathematics", marks: "96/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Kabir Saini",
-    class: "Class 10",
-    subjects: [
-      { name: "Mathematics", marks: "95/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Prachee Yadav",
-    class: "Class 10",
-    subjects: [
-      { name: "Mathematics", marks: "95/100" },
-      { name: "Science", marks: "95/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Shruti Ghosh",
-    class: "Class 10",
-    subjects: [
-      { name: "Mathematics", marks: "95/100" },
-      { name: "Science", marks: "93/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Madhav Pratap",
-    class: "Class 10",
-    subjects: [
-      { name: "Mathematics", marks: "95/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Mahi",
-    class: "Class 10",
-    subjects: [
-      { name: "Mathematics", marks: "95/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Ridhima Yadav",
-    class: "Class 10",
-    subjects: [
-      { name: "Mathematics", marks: "95/100" },
-      { name: "Science", marks: "90/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Abhinav Gupta",
-    class: "Class 10",
-    subjects: [
-      { name: "Mathematics", marks: "95/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Tapan Kumar",
-    class: "Class 10",
-    subjects: [
-      { name: "Mathematics", marks: "95/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Yash Arora",
-    class: "Class 12",
-    subjects: [
-      { name: "Mathematics", marks: "99/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Tanish Singh",
-    class: "Class 12",
-    subjects: [
-      { name: "Chemistry", marks: "98/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Aditya Singh",
-    class: "Class 12",
-    subjects: [
-      { name: "Mathematics", marks: "97/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Riddhima Tiwari",
-    class: "Class 12",
-    subjects: [
-      { name: "Mathematics", marks: "97/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Rishabh",
-    class: "Class 12",
-    subjects: [
-      { name: "Mathematics", marks: "96/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Yashika Singh",
-    class: "Class 12",
-    subjects: [
-      { name: "Mathematics", marks: "96/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Vanshika Sharma",
-    class: "Class 12",
-    subjects: [
-      { name: "Mathematics", marks: "92/100" },
-      { name: "Chemistry", marks: "96/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Simran Sohal",
-    class: "Class 12",
-    subjects: [
-      { name: "Mathematics", marks: "95/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Riti",
-    class: "Class 12",
-    subjects: [
-      { name: "Mathematics", marks: "94/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Gaurang Rathi",
-    class: "Class 12",
-    subjects: [
-      { name: "Mathematics", marks: "94/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Lakshay Sharma",
-    class: "Class 12",
-    subjects: [
-      { name: "Mathematics", marks: "93/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Riddhi Goel",
-    class: "Class 12",
-    subjects: [
-      { name: "Mathematics", marks: "93/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Yash Jangra",
-    class: "Class 12",
-    subjects: [
-      { name: "Physics", marks: "92/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Raghvendra Singh",
-    class: "Class 12",
-    subjects: [
-      { name: "Mathematics", marks: "91/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Kartik Dahiya",
-    class: "Class 12",
-    subjects: [
-      { name: "Mathematics", marks: "91/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Mayank Yadav",
-    class: "Class 12",
-    subjects: [
-      { name: "Chemistry", marks: "91/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Chhavi Dabas",
-    class: "Class 12",
-    subjects: [
-      { name: "Mathematics", marks: "90/100" },
-    ],
-    photo: Icons.Yatika,
-  },
-  {
-    name: "Bisleen Kaur",
-    class: "Class 12",
-    subjects: [
-      { name: "Chemistry", marks: "90/100" },
-    ],
-    photo: Icons.Yatika,
-  },
+  // {
+  //   name: "Harsh Kumar",
+  //   class: "Class 10",
+  //   subjects: [
+  //     { name: "Mathematics", marks: "98/100" },
+  //   ],
+  //   photo: Icons.Yatika,
+  // },
+  // {
+  //   name: "Gauransh Khatter",
+  //   class: "Class 10",
+  //   subjects: [
+  //     { name: "Mathematics", marks: "97/100" },
+  //     { name: "Science", marks: "97/100" },
+  //   ],
+  //   photo: Icons.Yatika,
+  // },
+  // {
+  //   name: "Yash Arora",
+  //   class: "Class 12",
+  //   subjects: [
+  //     { name: "Mathematics", marks: "99/100" },
+  //   ],
+  //   photo: Icons.Yatika,
+  // },
+  // {
+  //   name: "Tanish Singh",
+  //   class: "Class 12",
+  //   subjects: [
+  //     { name: "Chemistry", marks: "98/100" },
+  //   ],
+  //   photo: Icons.Yatika,
+  // },
+  // {
+  //   name: "Aditya Singh",
+  //   class: "Class 12",
+  //   subjects: [
+  //     { name: "Mathematics", marks: "97/100" },
+  //   ],
+  //   photo: Icons.Yatika,
+  // },
+  // {
+  //   name: "Riddhima Tiwari",
+  //   class: "Class 12",
+  //   subjects: [
+  //     { name: "Mathematics", marks: "97/100" },
+  //   ],
+  //   photo: Icons.Yatika,
+  // },
+  // {
+  //   name: "Rishabh",
+  //   class: "Class 12",
+  //   subjects: [
+  //     { name: "Mathematics", marks: "96/100" },
+  //   ],
+  //   photo: Icons.Yatika,
+  // },
+  // {
+  //   name: "Yashika Singh",
+  //   class: "Class 12",
+  //   subjects: [
+  //     { name: "Mathematics", marks: "96/100" },
+  //   ],
+  //   photo: Icons.Yatika,
+  // },
+  // {
+  //   name: "Vanshika Sharma",
+  //   class: "Class 12",
+  //   subjects: [
+  //     { name: "Mathematics", marks: "92/100" },
+  //     { name: "Chemistry", marks: "96/100" },
+  //   ],
+  //   photo: Icons.Yatika,
+  // },
+  // {
+  //   name: "Simran Sohal",
+  //   class: "Class 12",
+  //   subjects: [
+  //     { name: "Mathematics", marks: "95/100" },
+  //   ],
+  //   photo: Icons.Yatika,
+  // },
+  // {
+  //   name: "Riti",
+  //   class: "Class 12",
+  //   subjects: [
+  //     { name: "Mathematics", marks: "94/100" },
+  //   ],
+  //   photo: Icons.Yatika,
+  // },
+  // {
+  //   name: "Gaurang Rathi",
+  //   class: "Class 12",
+  //   subjects: [
+  //     { name: "Mathematics", marks: "94/100" },
+  //   ],
+  //   photo: Icons.Yatika,
+  // },
+  // {
+  //   name: "Lakshay Sharma",
+  //   class: "Class 12",
+  //   subjects: [
+  //     { name: "Mathematics", marks: "93/100" },
+  //   ],
+  //   photo: Icons.Yatika,
+  // },
+  // {
+  //   name: "Riddhi Goel",
+  //   class: "Class 12",
+  //   subjects: [
+  //     { name: "Mathematics", marks: "93/100" },
+  //   ],
+  //   photo: Icons.Yatika,
+  // },
+  // {
+  //   name: "Yash Jangra",
+  //   class: "Class 12",
+  //   subjects: [
+  //     { name: "Physics", marks: "92/100" },
+  //   ],
+  //   photo: Icons.Yatika,
+  // }
 ];
 
 const testimonials = [
@@ -587,8 +390,8 @@ const Results = () => {
           <p className='text-gray-500 text-center'>Our students consistently achieve top results in board exams and competitive exams. These toppers from Omega Tutorials reflect our commitment to quality coaching in Gurugram <span className='hidden'>(Gurgaon)</span>.</p>
         </motion.div>
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {toppers.map((t, i) => (
-            <motion.div key={i} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white rounded-xl p-6 shadow-[0_4px_24px_-6px_hsl(215_85%_45%/0.10)] flex flex-col items-center gap-4">
+          {toppers.map((t) => (
+            <div className="bg-white rounded-xl p-6 shadow-[0_4px_24px_-6px_hsl(215_85%_45%/0.10)] flex flex-col items-center gap-4">
               <img src={t.photo} alt={`${t.name} topper from Omega Tutorials coaching in Gurugram`} className="w-24 h-32 rounded-full object-cover border-4 border-[#1162D4]/20" />
               <div className="flex flex-col gap-1 text-center">
                 <p className="font-semibold">{t.name}</p>
@@ -602,7 +405,7 @@ const Results = () => {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
