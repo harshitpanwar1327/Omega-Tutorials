@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom'
 import { ArrowRight, Atom, Award, BookOpen, Calculator, CheckCircle, ClipboardCheck, FlaskConical, HelpCircle, Target, TrendingUp } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { Helmet } from "react-helmet-async"
+import { Element } from 'react-scroll'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -104,7 +105,7 @@ const Courses = () => {
       </div>
 
       {/* Courses */}
-      <div className='py-12 lg:py-24 px-4 lg:px-16 max-w-6xl mx-auto flex flex-col gap-8'>
+      <Element name='courses' className='py-12 lg:py-24 px-4 lg:px-16 max-w-6xl mx-auto flex flex-col gap-8'>
         {courseData.map((course, i) => (
           <motion.div key={i} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
             className="bg-white rounded-2xl shadow-[0_4px_24px_-6px_hsl(215_85%_45%/0.10)] overflow-hidden flex flex-col md:flex-row hover:scale-102 transition duration-300"
@@ -129,7 +130,7 @@ const Courses = () => {
             </div>
           </motion.div>
         ))}
-      </div>
+      </Element>
 
       {/* Features */}
       <div className="py-12 lg:py-24 px-4 lg:px-16 flex flex-col gap-12 bg-[hsl(210_40%_94%)]/50">

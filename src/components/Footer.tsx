@@ -1,8 +1,34 @@
 import { MapPin, Phone, Mail, Facebook, Instagram, Youtube } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import Logo from '../assets/Logo.jpg';
+import { scroller } from "react-scroll";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleScroll = (route: string, section: string) => {
+    if (location.pathname !== route) {
+      navigate(route);
+
+      setTimeout(() => {
+        if (section) {
+          scroller.scrollTo(section, {
+            smooth: true,
+            duration: 600,
+          });
+        }
+      }, 200);
+    } else {
+      if (section) {
+        scroller.scrollTo(section, {
+          smooth: true,
+          duration: 600,
+        });
+      }
+    }
+  };
+
   return (
     <footer className="bg-[linear-gradient(135deg,hsl(215_50%_18%),hsl(215_85%_45%))] text-white flex flex-col">
       <div className="p-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-16">
@@ -53,11 +79,11 @@ const Footer = () => {
         <div className="flex flex-col gap-3">
           <h3 className="text-lg font-semibold">Our Courses</h3>
           <div className="flex flex-col gap-2 text-white/70">
-            <NavLink to={'/courses'} className="hover:text-white cursor-pointer w-fit transition duration-300">Classes 9-10 (Maths & Science)</NavLink>
-            <NavLink to={'/courses'} className="hover:text-white cursor-pointer w-fit transition duration-300">Classes 11-12 (Maths, Physics, Chemistry & Biology)</NavLink>
-            <NavLink to={'/courses'} className="hover:text-white cursor-pointer w-fit transition duration-300">IIT-JEE</NavLink>
-            <NavLink to={'/courses'} className="hover:text-white cursor-pointer w-fit transition duration-300">NEET</NavLink>
-            <NavLink to={'/courses'} className="hover:text-white cursor-pointer w-fit transition duration-300">Olympiads</NavLink>
+            <p onClick={()=>handleScroll("/courses", "courses")} className="hover:text-white cursor-pointer w-fit transition duration-300">Classes 9-10 (Maths & Science)</p>
+            <p onClick={()=>handleScroll("/courses", "courses")} className="hover:text-white cursor-pointer w-fit transition duration-300">Classes 11-12 (Maths, Physics, Chemistry & Biology)</p>
+            <p onClick={()=>handleScroll("/courses", "courses")} className="hover:text-white cursor-pointer w-fit transition duration-300">IIT-JEE</p>
+            <p onClick={()=>handleScroll("/courses", "courses")} className="hover:text-white cursor-pointer w-fit transition duration-300">NEET</p>
+            <p onClick={()=>handleScroll("/courses", "courses")} className="hover:text-white cursor-pointer w-fit transition duration-300">Olympiads</p>
           </div>
         </div>
 
