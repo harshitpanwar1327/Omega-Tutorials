@@ -11,7 +11,6 @@ export { default as Rohan } from "./Rohan.jpeg";
 export { default as Tia } from "./Tia.jpeg";
 export { default as Atharv } from "./Atharv.jpeg";
 export { default as Arshia } from "./Arshia.jpeg";
-// export { default as Aryan } from "./Aryan.jpeg";
 export { default as Devansh } from "./Devansh.jpeg";
 export { default as Anirudh } from "./Anirudh.jpeg";
 export { default as Ishant } from "./Ishant.jpeg";
